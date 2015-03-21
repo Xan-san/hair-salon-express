@@ -45,8 +45,7 @@ body {
 	width: 956px;
 	height: 36px;
 	margin: 2px 0px 2px 0px;
-	background-image: url(../images/button-background-rep.gif);
-	background-repeat: repeat-x;
+	background: hsl(0,0%,0%);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 17px;
 	float: left;
