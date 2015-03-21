@@ -1,0 +1,368 @@
+@charset "UTF-8";
+/* CSS Document */
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 34px;
+	font-weight: bold;
+	line-height: 100%;
+	color: #C5185E;
+	margin: 15px 0px 10px 0px;
+	}	
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 140%;
+	font-weight: bold;
+	}	
+body {
+	margin: 0px;
+	text-align: center;
+	background-image: url(../images/background-rep.gif);
+	background-repeat: repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 140%;
+	}	
+#container {
+	width: 956px;
+	padding: 0px 2px 0px 2px;
+	margin: auto;
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+	background-image: url(../images/background-image.jpg);
+	background-repeat: no-repeat;
+	background-position: 2px 188px;
+	background-color: #FFF;
+	}	
+#header {
+	width: 956px;
+	height: 148px;
+	background-image: url(../images/total-hair-logo-banner.jpg);
+	background-repeat: no-repeat;
+	}	
+#topNav {
+	width: 956px;
+	height: 36px;
+	margin: 2px 0px 2px 0px;
+	background-image: url(../images/button-background-rep.gif);
+	background-repeat: repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	float: left;
+	}	
+#topNav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	}	
+#topNav li {
+	height: 29px;
+	float: left;
+	padding: 7px 20px 0px 20px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFF;
+	}	
+#topNav a {
+	color: #FFF;
+	text-decoration: none;
+	}	
+#topNav a:hover {
+	color: #C5185E;
+	text-decoration: none;
+	}
+#leftNav {
+	width: 215px;
+	margin: 11px 0px 0px 13px;
+	float: left;
+	display:inline;
+	}	
+#facebook {
+	width: 215px;
+	margin: 11px 0px 0px 0px;
+	float: left;
+	display:inline;
+	}	
+#shopHeader {
+	clear:both;
+	width: 201px;
+	height: 30px;
+	background-color: #C5185E;
+	float: left;
+	margin: 0px 0px 3px 0px;
+	padding: 10px 0px 0px 10px;
+	border: 2px solid #C5185E;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFF;
+	}	
+#shopNav {
+	width: 213px;
+	float: left;
+	margin: 0px 0px 8px 0px;
+	border: 1px solid #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #000;
+	color: #FFF;
+	}	
+#shopNav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 10px 15px 20px 15px;
+	line-height: 130%;
+	}	
+#shopNav li {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	padding: 3px 0px 3px 0px;
+	}
+#shopNav li.Header {
+	font-size: 18px;
+	padding: 7px 0px 7px 0px;
+	color:#C5185E;
+	}	
+#shopNav ul.catsNav {
+	list-style-type: none;
+	margin: 0px;
+	padding: 1px 0px 1px 0px;
+	line-height: 150%;
+	}
+#shopNav ul.innerNav {
+	list-style-type: none;
+	margin: 3px 0px 0px 0px;
+	padding: 2px 15px 1px 10px;
+	line-height: 150%;
+	background-color: #333;
+	border-top: 1px solid #CCC;
+	}
+#shopNav ul.innerNav li {
+	border-bottom:none;
+	}
+#shopNav a {
+	color: #FFF;
+	text-decoration: none;
+	}	
+#shopNav a:hover {
+	color: #C5185E;
+	text-decoration: none;
+	}
+#paypalLogo {
+	width: 138px;
+	margin: 0px 0px 10px 33px;
+	border: 1px solid #CCC;
+	}	
+#bannerAds {
+	width: 213px;
+	background-color: #C5185E;
+	float: left;
+	margin: 0px 0px 8px 0px;
+	}	
+#mainArea {
+	width: 698px;
+	margin: 11px 13px 0px 0px;
+	float: right;
+	padding: 0px 0px 0px 0px;
+	display:inline;
+	}	
+#mainText {
+	width: 652px;
+	margin: 0px 23px 0px 23px;
+	}	
+#results {
+	/*width: 526px;*/
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	overflow: hidden;
+	margin: 0px 0px 5px 0px;
+	padding: 5px 0px 0px 0px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CDCDCD;
+	}
+#results a {
+	color: #C5185E;
+	}
+#results1 {
+	width: 34%;
+	text-align: left;
+	float: left;
+	}
+#results2 {
+	width: 33%;
+	text-align: center;
+	float: left;
+	}
+#results3 {
+	width: 33%;
+	text-align: right;
+	float: left;
+	}
+#productListing {
+	width: 652px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 10px 0px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CDCDCD;
+	overflow: hidden;
+	}	
+#productlistingImage {
+	width: 125px;
+	float: left;
+	margin: 5px 0px 0px 0px;
+	}
+#productlistingImage h3 {
+	color: #666;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 5px 0px 0px 0px;
+	}
+#productlistingImage h3 a {
+	color: #666;
+	}
+#productlistingText {
+	width: 520px;
+	float: right;
+	}
+#productlistingText h1 {
+	color: #C5185E;
+	font-size: 21px;
+	font-weight: bold;
+	margin: 5px 0px 0px 0px;
+	}
+#productlistingText h2 {
+	color: #000;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	}
+#productlistingText p {
+	margin: 0px 0px 10px 0px;
+	}
+#footer {
+	width: 956px;
+	background-color: #9C3;
+	margin: 10px 0px 0px 0px;
+	float: left;
+	text-align: center;
+	font-size: 12px;
+	line-height: 200%;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	background-image: url(../images/footer-rep.jpg);
+	background-repeat: repeat-x;
+	color: #333;
+	}	
+#footer2 {
+	width: 956px;
+	background-color: #fff;
+	float: left;
+	text-align: center;
+	font-size: 12px;
+	color: #999;
+	}	
+#footer2 a {
+	color: #999;
+	}
+ img, div, input { behavior: url("js/iepngfix.htc") }
+ 
+ #topBannerAd {
+	width: 578px;
+	height: 108px;
+	margin: 20px 0px 0px 332px;
+	float: left;
+	}
+.homeBanner1 {
+	width: 650px;
+	height: 118px;
+	margin: 11px 0px 0px 0px;
+	float: left;
+	}
+.homeBanner2 {
+	width: 208px;
+	height: 118px;
+	margin: 12px 13px 0px 0px;
+	float: left;
+	}
+.homeBanner3 {
+	width: 208px;
+	height: 118px;
+	margin: 12px 0px 0px 0px;
+	float: left;
+	}
+	
+#topBannerAd img, .homeBanner1 img, .homeBanner2 img, .homeBanner3 img, .border
+{	border:1px solid #CFCFCF; }
+
+#topSellersHeader {
+	width: 637px;
+	height: 30px;
+	background-image: url(../images/top-sellers-rep.jpg);
+	background-repeat: repeat-x;
+	margin: 11px 0px 0px 0px;
+	padding: 10px 0px 0px 15px;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	line-height: 100%;
+	font-weight: bold;
+	color: #FFF;
+	}
+	
+.codeBox
+{
+	margin:0px 7px 0px 7px;
+	padding:4px;
+	height:18px;
+	border:1px solid #000;
+	width:70px;
+	vertical-align:middle;
+}
+
+.codeText img, .codeText input[type="image"]
+{	vertical-align:middle; }
+
+.QtyBox
+{
+	margin:0px 7px 0px 7px;
+	padding:4px 2px 4px 0px;
+	height:18px;
+	border:1px solid #000;
+	width:25px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+#SearchForm
+{
+	clear:both;
+	width: 191px;
+	height: 32px;
+	background-color: #C5185E;
+	float: left;
+	margin: 7px 0px 5px 0px;
+	padding: 10px 10px 0px 10px;
+}	
+
+#SearchForm input[type="text"]
+{	
+	border-width:1px;
+	border-style:solid;
+	border-color:#CCCCCC;
+	width:140px;
+	color:#999;
+	margin-right:5px;
+	float:left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	height:17px;
+	padding:2px 0px 1px 7px;
+}
+#SearchForm input[type="image"]
+{	
+	float:right;
+}
