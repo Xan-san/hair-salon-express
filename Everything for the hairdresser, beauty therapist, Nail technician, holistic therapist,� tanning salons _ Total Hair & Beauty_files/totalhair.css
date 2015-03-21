@@ -54,15 +54,19 @@ body {
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
+	text-align: center;
 	}	
 #topNav li {
 	height: 29px;
-	float: left;
+	display: inline-block;
 	padding: 7px 20px 0px 20px;
 	border-right-width: 1px;
 	border-right-style: solid;
 	border-right-color: #FFF;
-	}	
+	}
+#topNav li:nth-child(7){
+	border-right: 1px solid hsl(0,0%,0%);
+}	
 #topNav a {
 	color: #FFF;
 	text-decoration: none;
