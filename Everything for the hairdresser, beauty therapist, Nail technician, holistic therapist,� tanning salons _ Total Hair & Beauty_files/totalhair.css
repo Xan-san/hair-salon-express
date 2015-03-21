@@ -270,12 +270,6 @@ body {
 	}
  img, div, input { behavior: url("js/iepngfix.htc") }
  
- #topBannerAd {
-	width: 578px;
-	height: 108px;
-	margin: 20px 0px 0px 332px;
-	float: left;
-	}
 .homeBanner1 {
 	width: 650px;
 	height: 118px;
