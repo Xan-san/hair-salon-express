@@ -173,7 +173,10 @@ body {
 #mainText {
 	width: 652px;
 	margin: 0px 23px 0px 23px;
-	}	
+	}
+#mainText h1{
+	text-align: center;
+}	
 #results {
 	/*width: 526px;*/
 	font-family: Verdana, Geneva, sans-serif;
