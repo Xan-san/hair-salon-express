@@ -17,8 +17,6 @@ h2 {
 body {
 	margin: 0px;
 	text-align: center;
-	background-image: url(../images/background-rep.gif);
-	background-repeat: repeat;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 140%;
@@ -30,8 +28,6 @@ body {
 	position: relative;
 	text-align: left;
 	overflow: hidden;
-	background-image: url(../images/background-image.jpg);
-	background-repeat: no-repeat;
 	background-position: 2px 188px;
 	background-color: #FFF;
 	}	
