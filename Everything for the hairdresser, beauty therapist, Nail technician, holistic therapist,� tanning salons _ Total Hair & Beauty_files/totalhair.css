@@ -274,11 +274,8 @@ body {
 #topSellersHeader {
 	width: 637px;
 	height: 30px;
-	background-image: url(../images/top-sellers-rep.jpg);
-	background-repeat: repeat-x;
-	margin: 11px 0px 0px 0px;
+	background: hsl(0,0%,0%);
 	padding: 10px 0px 0px 15px;
-	float: left;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 21px;
 	line-height: 100%;
