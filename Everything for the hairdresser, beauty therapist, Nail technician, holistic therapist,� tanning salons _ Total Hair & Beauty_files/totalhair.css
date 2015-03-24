@@ -76,10 +76,7 @@ body {
 	text-decoration: none;
 	}
 #leftNav {
-	width: 215px;
-	margin: 11px 0px 0px 13px;
-	float: left;
-	display:inline;
+	display:none;
 	}	
 #facebook {
 	width: 215px;
@@ -348,4 +345,10 @@ body {
 /*Break point*/
 @media (min-width: 956px){
 
+#leftNav {
+	width: 215px;
+	margin: 11px 0px 0px 13px;
+	float: left;
+	display:inline;
+	}
 }
