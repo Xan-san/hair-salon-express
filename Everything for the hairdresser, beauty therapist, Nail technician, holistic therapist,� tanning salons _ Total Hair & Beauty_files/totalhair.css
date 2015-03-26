@@ -88,7 +88,6 @@ body {
 	width: 201px;
 	height: 30px;
 	background-color: #C5185E;
-	float: left;
 	margin: 0px 0px 3px 0px;
 	padding: 10px 0px 0px 10px;
 	border: 2px solid #C5185E;
@@ -161,7 +160,7 @@ body {
 	}	
 #mainArea {
 	width: 100%;
-	max-width:698px;
+	max-width:956px;
 	margin: 11px 13px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	display:inline-block;
@@ -343,7 +342,6 @@ body {
 #leftNav {
 	width: 215px;
 	margin: 11px 0px 0px 13px;
-	float: left;
 	display:inline-block;
 	}
 #shopNav, .addthis_toolbox, #bannerAds{
