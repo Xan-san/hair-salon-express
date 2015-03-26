@@ -84,7 +84,6 @@ body {
 	display:inline;
 	}	
 #shopHeader {
-	clear:both;
 	width: 201px;
 	height: 30px;
 	background-color: #C5185E;
@@ -308,11 +307,9 @@ body {
 
 #SearchForm
 {
-	clear:both;
 	width: 191px;
 	height: 32px;
 	background-color: #C5185E;
-	float: left;
 	margin: 7px 0px 5px 0px;
 	padding: 10px 10px 0px 10px;
 }	
