@@ -346,4 +346,14 @@ body {
 	float: left;
 	display:inline-block;
 	}
+#shopNav, .addthis_toolbox, #bannerAds{
+	display:none;
+}
+#shopHeader:hover + #shopNav{
+    display:block;
+}
+#shopNav:hover{
+	display:block;
+}
+
 }
