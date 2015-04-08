@@ -115,11 +115,13 @@ body {
 	border-bottom-style: solid;
 	border-bottom-color: #CCC;
 	padding: 3px 0px 3px 0px;
+	display:none;
 	}
 #shopNav li.Header {
 	font-size: 18px;
 	padding: 7px 0px 7px 0px;
 	color:#C5185E;
+	display:block;
 	}	
 #shopNav ul.catsNav {
 	list-style-type: none;
