@@ -161,6 +161,7 @@ $(document).ready(function() {$('#shopNav ul').initMenu();});
 
 </script>
   <li class="Header">Hairdressing</li>
+  <ul>
   	<li class="section "><a href="#">&gt; All Perms </a>
     	<ul style="display: none;" class="innerNav acitem" id="Drophairdressing-all-perms-">
 	<li><a href="http://www.hairsalonexpress.co.uk/store/hairdressing/all-perms-/indivdual-acid-perms-">Indivdual Acid Perms </a></li>
@@ -312,6 +313,7 @@ $(document).ready(function() {$('#shopNav ul').initMenu();});
   </ul>
   </li>
       <li><a href="http://www.hairsalonexpress.co.uk/store/hairdressing/total-salon-essential-products-">&gt; Total Salon Essential products </a></li>
+</ul>      
 	  <li class="Header">Hairdressing Retail</li>
   	<li class="section "><a href="#">&gt; Amargan therapy oil</a>
     	<ul style="display: none;" class="innerNav acitem" id="Dropretail-amargan-therapy-oil">
@@ -2012,7 +2014,7 @@ var navToggle = function(){
       $('#shopNav').toggle(200);
     });
     $('#shopNav li.Header').click(function(){
-      $().toggle(200);
+      $(this).next().toggle(200);
     })
 };
 $(document).ready(navToggle);
