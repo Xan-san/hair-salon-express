@@ -118,6 +118,10 @@ body {
 	}
 #shopNav ul ul{
 	display:none;
+	position:absolute;
+	left:214px;
+	top:-1px;
+	background:hsl(0,0%,20%);
 }
 #shopNav li.Header {
 	font-size: 18px;
