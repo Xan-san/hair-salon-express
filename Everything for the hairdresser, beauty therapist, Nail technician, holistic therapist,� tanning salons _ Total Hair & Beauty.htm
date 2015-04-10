@@ -2040,7 +2040,9 @@ var navToggle = function(){
       $('#shopNav').toggle(200);
     });
     $('#shopNav li.Header').click(function(){
+      $('#shopNav li.Header').removeClass('currentHeader');
       $('#shopNav ul ul:visible').hide(200);
+      $(this).addClass('currentHeader');
       $(this).next(':hidden').show(200);
     });
 };

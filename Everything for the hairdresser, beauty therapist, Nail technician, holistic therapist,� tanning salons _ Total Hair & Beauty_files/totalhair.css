@@ -121,13 +121,17 @@ body {
 	position:absolute;
 	left:214px;
 	top:-1px;
-	background:hsl(0,0%,20%);
+	background:hsl(0,0%,0%);
+	width:213px;
 }
 #shopNav li.Header {
 	font-size: 18px;
 	padding: 7px 0px 7px 0px;
 	color:#C5185E;
-	}	
+	}
+#shopNav li.currentHeader{
+	color:hsl(0,0%,100%);
+}	
 #shopNav ul.catsNav {
 	list-style-type: none;
 	margin: 0px;
