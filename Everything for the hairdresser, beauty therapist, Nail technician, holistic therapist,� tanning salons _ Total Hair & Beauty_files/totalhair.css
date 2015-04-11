@@ -187,6 +187,10 @@ body {
 #mainText h1{
 	text-align: center;
 }	
+#mainText form{
+	display:inline-block;
+	vertical-align: top;
+}
 #results {
 	/*width: 526px;*/
 	font-family: Verdana, Geneva, sans-serif;
@@ -351,6 +355,11 @@ body {
 }
 
 /*Break point*/
+@media (min-width: 679px){
+#mainText form{
+	width:49%;
+}
+}
 @media (min-width: 956px){
 
 #leftNav {
