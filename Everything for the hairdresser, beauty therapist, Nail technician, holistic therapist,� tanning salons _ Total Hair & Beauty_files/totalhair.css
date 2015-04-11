@@ -92,8 +92,11 @@ body {
 	border: 2px solid #C5185E;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 24px;
-	color: #FFF;
-	}	
+	color: hsl(0,0%,0%);
+	}
+#shopHeader:hover{
+	color:hsl(0,0%,100%);
+}	
 #shopNav {
 	width: 213px;
 	margin: 0px 0px 8px 0px;
@@ -129,6 +132,9 @@ body {
 	padding: 7px 0px 7px 0px;
 	color:#C5185E;
 	}
+#shopNav li.Header:hover{
+	color:hsl(0,0%,100%);
+}
 #shopNav li.currentHeader{
 	color:hsl(0,0%,100%);
 }	
