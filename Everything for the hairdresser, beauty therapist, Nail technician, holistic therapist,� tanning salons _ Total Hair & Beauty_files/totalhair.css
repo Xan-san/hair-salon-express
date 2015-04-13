@@ -90,16 +90,19 @@ body {
 #shopHeader {
 	width: 201px;
 	height: 30px;
-	background-color: #C5185E;
+	background-color: hsla(336, 78%, 43%, 0);
 	margin: 0px 0px 3px 0px;
 	padding: 10px 0px 0px 10px;
-	border: 2px solid #C5185E;
+	border: 2px solid hsl(336, 78%, 43%);
+	border-radius: 5px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 24px;
 	color: hsl(0,0%,0%);
 	cursor:pointer;
+	transition: all 0.2s linear 0s;
 	}
 #shopHeader:hover{
+	background-color: hsla(336, 78%, 43%, 1);
 	color:hsl(0,0%,100%);
 }	
 #shopNav {
