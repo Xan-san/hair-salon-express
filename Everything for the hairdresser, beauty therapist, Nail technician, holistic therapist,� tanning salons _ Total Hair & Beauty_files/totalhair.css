@@ -117,6 +117,7 @@ body {
 	background-color: #000;
 	color: #FFF;
 	position:absolute;
+	border-radius: 5px;
 	}	
 #shopNav ul {
 	list-style-type: none;
@@ -137,6 +138,7 @@ body {
 	top:-1px;
 	background:hsl(0,0%,0%);
 	width:213px;
+	border-radius: 5px;
 }
 #shopNav li.Header {
 	font-size: 18px;
