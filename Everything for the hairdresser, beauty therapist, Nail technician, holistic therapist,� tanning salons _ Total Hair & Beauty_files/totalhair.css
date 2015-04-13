@@ -79,6 +79,9 @@ body {
 }
 #shopNav, .addthis_toolbox, #bannerAds{
 	display:none;
+}
+#leftNav form{
+	display:inline-block;
 }	
 #facebook {
 	width: 215px;
@@ -87,6 +90,7 @@ body {
 	display:inline;
 	}	
 #shopHeader {
+	display:inline-block;
 	width: 201px;
 	height: 30px;
 	background-color: hsla(336, 78%, 43%, 0);
@@ -179,7 +183,6 @@ body {
 #bannerAds {
 	width: 213px;
 	background-color: #C5185E;
-	float: left;
 	margin: 0px 0px 8px 0px;
 	}	
 #mainArea {
@@ -348,7 +351,6 @@ body {
 	width:140px;
 	color:#999;
 	margin-right:5px;
-	float:left;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size:13px;
 	height:17px;
