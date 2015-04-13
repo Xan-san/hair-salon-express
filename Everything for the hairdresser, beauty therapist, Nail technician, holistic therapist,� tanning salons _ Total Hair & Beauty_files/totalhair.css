@@ -75,7 +75,7 @@ body {
 	}
 #leftNav {
 	display:inline-block;
-	margin: 11px 0px 0px 13px;
+	margin: 0 12px;
 }
 #shopNav, .addthis_toolbox, #bannerAds{
 	display:none;
