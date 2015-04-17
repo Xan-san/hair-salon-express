@@ -312,6 +312,7 @@ body {
 	line-height: 100%;
 	font-weight: bold;
 	color: #FFF;
+	border-radius: 5px;
 	}
 	
 .codeBox
@@ -324,8 +325,20 @@ body {
 	vertical-align:middle;
 }
 
-.codeText img, .codeText input[type="image"]
-{	vertical-align:middle; }
+.codeText img, .codeText input[type="image"]{	
+	vertical-align:middle; 
+}
+.codeText input[type="image"]{
+    border-radius: 5px;
+	background: hsla(336, 78%, 43%,0.9);
+	color: hsl(0,0%,100%);
+	font-size: 16px;
+	font-weight: bold;
+	padding: 6px 32px;
+}
+.codeText input[type="image"]:hover{
+	background: hsl(336, 78%, 43%);
+}
 
 .QtyBox
 {
