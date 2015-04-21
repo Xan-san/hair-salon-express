@@ -59,7 +59,7 @@ jQuery.fn.initMenu = function() {
                     if(theElement[0] === undefined) {
                         window.location.href = this.href;
                     }
-                    $(theElement).slideToggle('normal', function() {
+                    $(theElement).toggle(200, function() {
                         if ($(this).is(':visible')) {
                             $(this).prev().addClass('active');
                         }
@@ -72,7 +72,7 @@ jQuery.fn.initMenu = function() {
                 else {
                     if(theElement.hasClass('acitem') && theElement.is(':visible')) {
                         if($(parent).hasClass('collapsible')) {
-                            $('.acitem:visible', parent).first().slideUp('normal', 
+                            $('.acitem:visible', parent).first().hide(200, 
                             function() {
                                 $(this).prev().removeClass('active');
                             }
@@ -82,10 +82,10 @@ jQuery.fn.initMenu = function() {
                     return false;
                 }
                 if(theElement.hasClass('acitem') && !theElement.is(':visible')) {         
-                    $('.acitem:visible', parent).first().slideUp('normal', function() {
+                    $('.acitem:visible', parent).first().hide(200, function() {
                         $(this).prev().removeClass('active');
                     });
-                    theElement.slideDown('normal', function() {
+                    theElement.show(200, function() {
                         $(this).prev().addClass('active');
                     });
                     return false;
