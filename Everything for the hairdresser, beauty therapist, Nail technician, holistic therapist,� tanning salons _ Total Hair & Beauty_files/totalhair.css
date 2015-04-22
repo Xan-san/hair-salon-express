@@ -100,6 +100,7 @@ body {
 }	
 #leftNav form{
 	overflow:hidden;
+	max-width: 742px;
 }	
 #leftNav form .SearchWrapper{
 	overflow:hidden;
@@ -278,7 +279,7 @@ body {
 	margin: 0px 0px 10px 0px;
 	}
 #footer {
-	width: 956px;
+	width: 100%;
 	background-color: #9C3;
 	margin: 10px 0px 0px 0px;
 	float: left;
@@ -293,7 +294,7 @@ body {
 	color: #333;
 	}	
 #footer2 {
-	width: 956px;
+	width: 100%;
 	background-color: #fff;
 	float: left;
 	text-align: center;
