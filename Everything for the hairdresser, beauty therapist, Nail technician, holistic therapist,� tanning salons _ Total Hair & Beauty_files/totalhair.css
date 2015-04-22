@@ -26,7 +26,6 @@ body {
 	line-height: 140%;
 	}	
 #container {
-	max-width: 956px;
 	padding: 0px 2px 0px 2px;
 	margin: auto;
 	position: relative;
@@ -37,9 +36,11 @@ body {
 	}	
 #header {
 	width: 100%;
+	max-width:956px;
 	height: 148px;
 	background-image: url(../images/total-hair-logo-banner.jpg);
 	background-repeat: no-repeat;
+	margin: 0 auto;
 	}	
 #topNav {
 	margin: 2px auto;
@@ -74,6 +75,7 @@ body {
 	}
 #leftNav {
 	margin: 0 auto;
+	max-width:956px;
 }
 #shopHeader {
 	vertical-align:top;
@@ -112,6 +114,7 @@ body {
 	color: #FFF;
 	position:absolute;
 	border-radius: 5px;
+	display:none;
 	}	
 #shopNav ul {
 	list-style-type: none;
@@ -181,7 +184,6 @@ body {
 	}		
 #mainArea {
 	width: 100%;
-	max-width:956px;
 	margin: 11px 13px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	display:inline-block;
@@ -393,8 +395,10 @@ body {
 	width:49%;
 }
 }
-@media (min-width: 956px){
-
+@media (min-width: 1044px){
+#mainText form{
+	width:33%;
+}
 #leftNav {
 
 }
