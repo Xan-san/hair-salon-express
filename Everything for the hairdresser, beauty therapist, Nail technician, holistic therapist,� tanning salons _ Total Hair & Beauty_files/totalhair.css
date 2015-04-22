@@ -268,9 +268,13 @@ body {
 	display:inline-block;
 	}
 #facebook {
-	float: left;
-	margin-right:2px;
+	display:inline-block;
+	vertical-align:middle;
 	}
+#addSocial{
+	display:inline-block;
+	vertical-align:middle;
+}
 #bannerAds {
 	float:right;
 	padding: 6px 0;
