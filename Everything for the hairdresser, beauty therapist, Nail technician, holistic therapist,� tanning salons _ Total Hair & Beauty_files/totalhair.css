@@ -101,13 +101,7 @@ body {
 }	
 #leftNav form .SearchWrapper{
 	overflow:hidden;
-}
-#facebook {
-	width: 215px;
-	margin: 11px 0px 0px 0px;
-	float: left;
-	display:inline;
-	}	
+}	
 #shopNav {
 	width: 213px;
 	margin: 0px 0px 8px 0px;
@@ -184,12 +178,7 @@ body {
 	width: 138px;
 	margin: 0px 0px 10px 33px;
 	border: 1px solid #CCC;
-	}	
-#bannerAds {
-	width: 213px;
-	background-color: #C5185E;
-	margin: 0px 0px 8px 0px;
-	}	
+	}		
 #mainArea {
 	width: 100%;
 	max-width:956px;
@@ -275,17 +264,23 @@ body {
 #productlistingText p {
 	margin: 0px 0px 10px 0px;
 	}
+#socialMedia{
+	display:inline-block;
+	}
+#facebook {
+	float: left;
+	margin-right:2px;
+	}
+#bannerAds {
+	float:right;
+	padding: 6px 0;
+	}
 #footer {
 	width: 100%;
 	background-color: #9C3;
-	margin: 10px 0px 0px 0px;
-	float: left;
 	text-align: center;
 	font-size: 12px;
 	line-height: 200%;
-	border-top-width: 2px;
-	border-top-style: solid;
-	border-top-color: #FFF;
 	background-image: url(../images/footer-rep.jpg);
 	background-repeat: repeat-x;
 	color: #333;
