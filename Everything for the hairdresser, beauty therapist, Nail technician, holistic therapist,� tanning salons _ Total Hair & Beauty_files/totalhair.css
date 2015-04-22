@@ -75,9 +75,6 @@ body {
 #leftNav {
 	margin: 0 auto;
 }
-#shopNav, .addthis_toolbox, #bannerAds{
-	display:none;
-}
 #shopHeader {
 	vertical-align:top;
 	width: 201px;
