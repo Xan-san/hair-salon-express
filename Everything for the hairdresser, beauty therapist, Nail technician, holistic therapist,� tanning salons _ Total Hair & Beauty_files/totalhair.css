@@ -35,7 +35,6 @@ body {
 	background-color: #FFF;
 	}	
 #header {
-	width: 100%;
 	max-width:956px;
 	height: 148px;
 	background-image: url(../images/total-hair-logo-banner.jpg);
@@ -43,7 +42,7 @@ body {
 	margin: 0 auto;
 	}	
 #topNav {
-	margin: 2px auto;
+	margin: 0 auto;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 17px;
 	}	
@@ -304,7 +303,6 @@ body {
  img, div, input { behavior: url("js/iepngfix.htc") }
 
 #topSellersHeader {
-	width: 100%;
 	max-width:956px;
 	height: 30px;
 	background: hsl(0,0%,0%);
