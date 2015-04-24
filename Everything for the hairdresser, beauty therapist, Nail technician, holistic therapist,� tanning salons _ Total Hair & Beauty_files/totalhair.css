@@ -26,12 +26,10 @@ body {
 	line-height: 140%;
 	}	
 #container {
-	padding: 0px 2px 0px 2px;
-	margin: auto;
+	padding: 0 2px;
+	margin: 0 auto;
 	position: relative;
 	text-align: left;
-	overflow: hidden;
-	background-position: 2px 188px;
 	background-color: #FFF;
 	}	
 #header {
@@ -79,6 +77,11 @@ body {
 #container.fix-leftNav #leftNav{
 	position:fixed;
 	width:100%;
+	z-index: 99;
+	top: 0px;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0px);
+	        transform: translate(-50%, 0px);
 }
 #shopHeader {
 	vertical-align:top;
@@ -183,13 +186,16 @@ body {
 	width: 138px;
 	margin: 0px 0px 10px 33px;
 	border: 1px solid #CCC;
-	}		
+	}	
+#container.fix-leftNav #leftNavOffset{
+	position:relative;
+	top:56px;
+}		
 #mainArea {
 	width: 100%;
-	margin: 11px 13px 0px 0px;
-	padding: 0px 0px 0px 0px;
+	padding: 0;
 	display:inline-block;
-	}	
+}
 #mainText {
 	margin: 0px 23px 0px 23px;
 	}
