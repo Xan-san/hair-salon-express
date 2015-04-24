@@ -2061,6 +2061,16 @@ var navToggle = function(){
       $(this).addClass('currentHeader');
       $(this).next(':hidden').show(200);
     });
+
+    var container = $('#container');
+    $(window).scroll(function(e) {
+      var scroll = $(window).scrollTop();
+    if (scroll >= window.innerHeight) {
+    $(container).addClass('fix-leftNav');
+    } else {
+    $(container).removeClass('fix-leftNav');
+    }
+   });
 };
 $(document).ready(navToggle);
 </script>

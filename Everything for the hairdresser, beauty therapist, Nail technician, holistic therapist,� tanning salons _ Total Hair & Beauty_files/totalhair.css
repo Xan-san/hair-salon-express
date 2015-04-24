@@ -76,6 +76,10 @@ body {
 	margin: 0 auto;
 	max-width:956px;
 }
+#container.fix-leftNav #leftNav{
+	position:fixed;
+	width:100%;
+}
 #shopHeader {
 	vertical-align:top;
 	width: 201px;
