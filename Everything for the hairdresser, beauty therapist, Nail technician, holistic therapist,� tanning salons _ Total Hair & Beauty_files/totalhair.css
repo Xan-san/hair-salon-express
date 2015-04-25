@@ -90,7 +90,7 @@ body {
 	margin: 0px auto;
 	text-align: center;
 	padding: 10px 0px 0px;
-	background-color: hsla(336, 78%, 43%, 0);
+	background-color: hsl(336, 78%, 100%);
 	border: 2px solid hsl(336, 78%, 43%);
 	border-radius: 5px;
 	font-family: Arial, Helvetica, sans-serif;
