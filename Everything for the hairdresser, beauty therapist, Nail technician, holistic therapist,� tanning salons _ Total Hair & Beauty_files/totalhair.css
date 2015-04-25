@@ -87,7 +87,7 @@ body {
 	vertical-align:top;
 	width: 201px;
 	height: 30px;
-	margin: 0px auto;
+	margin: 7px auto 0;
 	text-align: center;
 	padding: 10px 0px 0px;
 	background-color: hsl(336, 78%, 100%);
@@ -189,7 +189,7 @@ body {
 	}	
 #container.fix-leftNav #leftNavOffset{
 	position:relative;
-	top:56px;
+	top:107px;
 }		
 #mainArea {
 	width: 100%;
@@ -398,6 +398,10 @@ body {
 	padding: 10px 0px 0px 10px;
 	text-align:left;
 }
+#container.fix-leftNav #leftNavOffset{
+	position:relative;
+	top:56px;
+}		
 }
 @media (min-width: 679px){
 #mainText form{
