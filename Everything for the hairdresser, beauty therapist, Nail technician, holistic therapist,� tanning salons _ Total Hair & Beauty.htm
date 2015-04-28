@@ -2066,9 +2066,10 @@ var navToggle = function(){
     });
 
     var container = $('#container');
+    var leftNavTop = $('#leftNav').offset().top;
     $(window).scroll(function(e) {
       var scroll = $(window).scrollTop();
-    if (scroll >= 188) {
+    if (scroll >= leftNavTop) {
     $(container).addClass('fix-leftNav');
     } else {
     $(container).removeClass('fix-leftNav');

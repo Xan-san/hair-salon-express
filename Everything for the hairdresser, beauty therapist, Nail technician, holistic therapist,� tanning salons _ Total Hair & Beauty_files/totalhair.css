@@ -135,7 +135,6 @@ body {
 	}
 #shopNav ul ul{
 	display:none;
-	position:absolute;
 	left:100%;
 	top:0;
 	background:hsl(0,0%,10%);
@@ -397,6 +396,9 @@ body {
 	margin: 7px 0px;
 	padding: 10px 0px 0px 10px;
 	text-align:left;
+}
+#shopNav ul ul{
+	position:absolute;
 }
 #container.fix-leftNav #leftNavOffset{
 	position:relative;
