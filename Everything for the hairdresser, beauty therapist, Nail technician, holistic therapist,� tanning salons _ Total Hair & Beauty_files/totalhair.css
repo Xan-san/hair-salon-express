@@ -24,7 +24,10 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 140%;
-	}	
+}
+body.fsMenu{
+	overflow:hidden;
+} 
 #container {
 	padding: 0 2px;
 	margin: 0 auto;
@@ -83,6 +86,10 @@ body {
 	-webkit-transform: translate(-50%, 0px);
 	        transform: translate(-50%, 0px);
 }
+body.fsMenu #leftNav{
+	background-color:hsla(336, 78%, 43%,0.5);
+	height:100vh; 
+}
 #shopHeader {
 	vertical-align:top;
 	width: 201px;
@@ -111,15 +118,17 @@ body {
 	overflow:hidden;
 }	
 #shopNav {
-	width: 213px;
+	/* width: 213px; */
 	margin: 0px 0px 8px 0px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	background-color: #000;
 	color: #FFF;
-	position:absolute;
+	position:absolute; 
 	border-radius: 5px;
 	display:none;
+	height:73%;
+	overflow:auto;
 	}	
 #shopNav ul {
 	list-style-type: none;
