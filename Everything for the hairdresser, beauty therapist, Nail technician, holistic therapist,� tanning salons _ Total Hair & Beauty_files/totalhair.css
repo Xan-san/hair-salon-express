@@ -125,9 +125,13 @@ body.fsMenu #leftNav{
 	background-color: #000;
 	color: #FFF;
 	position:absolute; 
+	left: 50%;
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
 	border-radius: 5px;
 	display:none;
 	height:73%;
+	max-height:459px;
 	overflow:auto;
 	}	
 #shopNav ul {
