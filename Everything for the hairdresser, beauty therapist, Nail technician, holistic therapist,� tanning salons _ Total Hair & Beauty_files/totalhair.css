@@ -118,7 +118,6 @@ body.fsMenu #leftNav{
 	overflow:hidden;
 }	
 #shopNav {
-	/* width: 213px; */
 	margin: 0px 0px 8px 0px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -132,6 +131,8 @@ body.fsMenu #leftNav{
 	display:none;
 	height:73%;
 	max-height:459px;
+	width:100%;
+	text-align:center;
 	overflow:auto;
 	}	
 #shopNav ul {
@@ -409,6 +410,9 @@ body.fsMenu #leftNav{
 	margin: 7px 0px;
 	padding: 10px 0px 0px 10px;
 	text-align:left;
+}
+#shopNav{
+	width:initial;
 }
 #shopNav ul ul{
 	position:absolute;
