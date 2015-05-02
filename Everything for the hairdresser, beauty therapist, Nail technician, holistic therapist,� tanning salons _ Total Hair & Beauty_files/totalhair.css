@@ -132,6 +132,7 @@ body.fsMenu #leftNav{
 	height:73%;
 	max-height:459px;
 	width:100%;
+	max-width:525px;
 	text-align:center;
 	overflow:auto;
 	}	
@@ -410,9 +411,9 @@ body.fsMenu #leftNav{
 	padding: 10px 0px 0px 10px;
 	text-align:left;
 }
-#shopNav{
+/* #shopNav{
 	width:initial;
-}
+} */
 /* #shopNav ul ul{
 	position:absolute;
 } */
@@ -432,6 +433,8 @@ body.fsMenu #leftNav{
 	left:0;
 	overflow:visible;
 	max-height:none;
+	width:initial;
+	max-width:none;
 	transform:none;
 }
 #shopNav ul ul{
