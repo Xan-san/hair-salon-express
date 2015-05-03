@@ -145,15 +145,22 @@ body.fsMenu #leftNav{
 #shopNav li {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #CCC;
-	padding: 3px 0px 3px 0px;
+	border-bottom-color: hsl(336, 78%, 43%);
+	padding: 3px 0px;
+	transition: all 0.2s linear 0s;
 	}
 #shopNav ul ul{
 	display:none;
 	left:100%;
 	top:0;
-	background:hsl(0,0%,10%);
+	background:hsl(0,0%,5%);
 	border-radius: 5px;
+}
+#shopNav ul ul li{
+	border-bottom-color: hsl(0, 0%, 100%);
+}
+#shopNav ul ul li:hover{
+	border-bottom-color: hsl(336, 78%, 43%);
 }
 #shopNav li.Header {
 	font-size: 18px;
@@ -163,6 +170,7 @@ body.fsMenu #leftNav{
 	}
 #shopNav li.Header:hover{
 	color:hsl(0,0%,100%);
+	border-bottom-color: hsl(0,0%,100%);
 }
 #shopNav li.currentHeader{
 	color:hsl(0,0%,100%);
@@ -179,19 +187,26 @@ body.fsMenu #leftNav{
 	list-style-type: none;
 	padding: 2px 15px 1px 10px;
 	line-height: 150%;
-	background-color: hsl(0,0%,20%);
+	background-color: hsl(0,0%,0%);
 	}
+#shopNav ul.innerNav a{
+	color:hsl(336, 78%, 43%);
+}
+#shopNav ul.innerNav a:hover{
+	color:hsl(0,0%,100%);
+}
 #shopNav ul.innerNav li {
 	border-bottom:none;
 	}
 #shopNav a {
 	color: #FFF;
 	text-decoration: none;
+	transition: all 0.2s linear 0s;
 	}	
 #shopNav a:hover {
 	color: #C5185E;
 	text-decoration: none;
-	}
+}
 #shopNav ul ul .active{
 	color:hsl(336, 78%, 43%);
 }
