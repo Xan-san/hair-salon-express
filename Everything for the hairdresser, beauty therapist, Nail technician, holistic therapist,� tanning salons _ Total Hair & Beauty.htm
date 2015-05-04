@@ -2050,12 +2050,23 @@ Sold in outer display gift box. MRRP £13.99</p><p></p>
 <script>
 var navToggle = function(){
 
+    var container = $('#container');
+    var leftNavTop = $('#leftNav').offset().top;
+
     $('#shopHeader').click(function(){
+
+      var windowTop = $(window).scrollTop();
+      
       $('#shopNav ul ul a').removeClass('active');
       $('#shopNav li.Header').removeClass('currentHeader');
       $('#shopNav ul ul:visible').hide(200);
       $('#shopNav').toggle(200);
       $('body').toggleClass('fsMenu')
+      
+      if(leftNavTop > windowTop){
+      $(container).toggleClass('fix-leftNav');
+      }
+      
     });
     
     $('#shopNav li.Header').click(function(){
@@ -2066,8 +2077,6 @@ var navToggle = function(){
       $(this).next(':hidden').show(200);
     });
 
-    var container = $('#container');
-    var leftNavTop = $('#leftNav').offset().top;
     $(window).scroll(function(e) {
       var scroll = $(window).scrollTop();
     if (scroll >= leftNavTop) {
