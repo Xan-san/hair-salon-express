@@ -68,11 +68,10 @@ body.fsMenu{
 	color: hsl(336, 78%, 100%);
 	text-decoration: none;
 	transition: all 0.2s linear 0s;
-	}	
+}	
 #topNav a:hover {
 	color: hsl(336, 78%, 43%);
-	text-decoration: none;
-	}
+}
 #leftNav {
 	margin: 0 auto;
 	max-width:956px;
@@ -198,11 +197,9 @@ body.fsMenu #leftNav{
 	transition: all 0.2s linear 0s;
 	color:hsl(0,0%,100%);
 	}	
-#shopNav a:hover {
+#shopNav a:hover, #shopNav ul ul .active  {
 	color: hsl(336, 78%, 43%);
-}
-#shopNav ul ul .active{
-	color:hsl(336, 78%, 43%);
+	text-decoration: underline;
 }
 #paypalLogo {
 	width: 138px;
