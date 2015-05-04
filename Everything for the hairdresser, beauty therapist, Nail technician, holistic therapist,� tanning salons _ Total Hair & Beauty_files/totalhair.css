@@ -194,13 +194,12 @@ body.fsMenu #leftNav{
 	border-bottom:none;
 	}
 #shopNav a {
-	color: #FFF;
 	text-decoration: none;
 	transition: all 0.2s linear 0s;
+	color:hsl(0,0%,100%);
 	}	
 #shopNav a:hover {
-	color: #C5185E;
-	text-decoration: none;
+	color: hsl(336, 78%, 43%);
 }
 #shopNav ul ul .active{
 	color:hsl(336, 78%, 43%);
