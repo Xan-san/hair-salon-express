@@ -27,6 +27,7 @@ body {
 }
 body.fsMenu{
 	overflow:hidden;
+	height:100%;
 } 
 #container {
 	padding: 0 2px;
@@ -87,6 +88,7 @@ body.fsMenu{
 }
 body.fsMenu #leftNav{
 	background-color:hsla(336, 78%, 43%,0.5);
+	height:100%;
 	height:100vh; 
 }
 #shopHeader {
