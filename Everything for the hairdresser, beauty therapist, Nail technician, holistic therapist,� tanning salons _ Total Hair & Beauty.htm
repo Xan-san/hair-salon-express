@@ -2065,6 +2065,7 @@ var navToggle = function(){
       $('body,html').toggleClass('stopScroll');
       if($('body').hasClass('stopScroll')){
       $('body,html').bind('touchmove', function(e){e.preventDefault()});
+      $('#letNav').unbind('touchmove');
       }else{$('body,html').unbind('touchmove')}
 
       
