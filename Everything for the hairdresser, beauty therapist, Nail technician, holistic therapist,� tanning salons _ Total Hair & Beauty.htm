@@ -2061,7 +2061,12 @@ var navToggle = function(){
       $('#shopNav li.Header').removeClass('currentHeader');
       $('#shopNav ul ul:visible').hide(200);
       $('#shopNav').toggle(200);
-      $('body').toggleClass('fsMenu')
+
+      $('body,html').toggleClass('stopScroll');
+      if($('body').hasClass('stopScroll')){
+      $('body,html').bind('touchmove', function(e){e.preventDefault()});
+      }else{$('body,html').unbind('touchmove')}
+
       
       if(leftNavTop > windowTop){
       $(container).toggleClass('fix-leftNav');
