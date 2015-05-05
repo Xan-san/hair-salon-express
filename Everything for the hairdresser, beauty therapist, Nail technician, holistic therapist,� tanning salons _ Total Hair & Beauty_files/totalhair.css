@@ -295,6 +295,8 @@ body.fsMenu #leftNav{
 	}
 #socialMedia{
 	display:inline-block;
+	text-align:center;
+	width:100%;
 	}
 #facebook {
 	display:inline-block;
@@ -305,9 +307,12 @@ body.fsMenu #leftNav{
 	vertical-align:middle;
 }
 #bannerAds {
-	float:right;
 	padding: 6px 0;
 	}
+#bannerAds img{
+	margin:0 auto;
+	display:block;
+}
 #footer {
 	width: 100%;
 	background-color: #9C3;
@@ -427,6 +432,14 @@ body.fsMenu #leftNav{
 	position:relative;
 	top:56px;
 }		
+}
+@media (min-width: 620px){
+#socialMedia{
+	width:initial;
+}
+#bannerAds{
+	float:right;
+}
 }
 @media (min-width: 679px){
 #mainText form{
