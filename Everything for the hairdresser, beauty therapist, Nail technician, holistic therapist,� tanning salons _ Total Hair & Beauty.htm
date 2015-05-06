@@ -2063,7 +2063,10 @@ var navToggle = function(){
       $('#shopNav').toggle(200);
 
       $('body').toggleClass('stopScroll');
-      /*else{$('body').off('touchmove');}*/
+      /*if($('body').hasClass('stopScroll')){*/
+      $('body,html').on('touchmove', function(e){e.preventDefault()});
+      $('#leftNav').on('touchmove',function(e){e.stopPropagation()});
+      /*}else{$('body').off('touchmove');}*/
 
       if(leftNavTop > windowTop){
       $(container).toggleClass('fix-leftNav');
@@ -2071,10 +2074,7 @@ var navToggle = function(){
       
     });
 
-    if($('body').hasClass('stopScroll')){
-      $('body').on('touchmove', function(e){e.preventDefault()});
-      $('#leftNav').on('touchmove',function(e){e.stopPropagation()});
-      }
+    
     
     $('#shopNav li.Header').click(function(){
       $('#shopNav ul ul a').removeClass('active');
