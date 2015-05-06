@@ -2063,10 +2063,10 @@ var navToggle = function(){
       $('#shopNav').toggle(200);
 
       $('body').toggleClass('stopScroll');
-      /*if($('body').hasClass('stopScroll')){*/
+      if($('body').hasClass('stopScroll')){
       $('body,html').on('touchmove', function(e){e.preventDefault()});
       $('#shopNav').on('touchmove',function(e){e.stopPropagation()});
-      /*}else{$('body').off('touchmove');}*/
+      }/*else{$('body').off('touchmove');}*/
 
       if(leftNavTop > windowTop){
       $(container).toggleClass('fix-leftNav');
