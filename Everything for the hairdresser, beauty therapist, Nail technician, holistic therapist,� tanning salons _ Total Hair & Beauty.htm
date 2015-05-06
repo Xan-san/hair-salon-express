@@ -2065,7 +2065,7 @@ var navToggle = function(){
       $('body').toggleClass('stopScroll');
       if($('body').hasClass('stopScroll')){
       $('body,html').on('touchmove', function(e){e.preventDefault()});
-      $('#shopNav').on('touchmove',function(e){e.stopPropagation()});
+      /*$('#shopNav').on('touchmove',function(e){e.stopPropagation()});*/
       }/*else{$('body').off('touchmove');}*/
 
       if(leftNavTop > windowTop){
