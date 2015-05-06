@@ -2064,7 +2064,7 @@ var navToggle = function(){
 
       $('body').toggleClass('stopScroll');
       if($('body').hasClass('stopScroll')){
-      /*$('body').on('touchmove', function(e){e.preventDefault()});*/
+      $('body').on('touchmove', function(e){e.preventDefault()});
       $('#leftNav').on('touchmove',function(e){e.stopPropagation()});
       }/*else{$('body').off('touchmove');}*/
 
