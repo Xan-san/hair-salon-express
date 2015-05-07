@@ -2070,12 +2070,14 @@ var navToggle = function(){
       if($('body').hasClass('stopScroll')){
       /*$('body,html').on('touchmove', function(e){e.preventDefault()});
       $('#shopNav').on('touchmove',function(e){e.stopPropagation()});*/
-      $('#leftNav').on('touchmove',function(e){
-      if(!$('#shopNav').has($(e.target)).length)
-        e.preventDefault();
+        $('#leftNav').on('touchmove',function(e){
+          if(!$('#shopNav').has($(e.target)).length){
+            e.preventDefault();
+      }
+          $(window).scrollTop() = windowTop;
       });
       
-      $(window).scrollTop() = windowTop;
+      
       
       }/*else{$('body,html').off('touchmove');}*/
       
