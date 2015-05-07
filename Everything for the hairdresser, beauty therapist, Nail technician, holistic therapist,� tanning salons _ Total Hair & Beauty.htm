@@ -2064,9 +2064,13 @@ var navToggle = function(){
 
       $('body').toggleClass('stopScroll');
       if($('body').hasClass('stopScroll')){
-      $('body,html').on('touchmove', function(e){e.preventDefault()});
-      $('#shopNav').on('touchmove',function(e){e.stopPropagation()});
-      }else{$('body,html').off('touchmove');}
+      /*$('body,html').on('touchmove', function(e){e.preventDefault()});
+      $('#shopNav').on('touchmove',function(e){e.stopPropagation()});*/
+      $('#leftNav').on('touchmove',function(e){
+      if(!$('#shopNav').has($(e.target)).length)
+        e.preventDefault();
+      });
+      }/*else{$('body,html').off('touchmove');}*/
 
       if(leftNavTop > windowTop){
       $(container).toggleClass('fix-leftNav');
