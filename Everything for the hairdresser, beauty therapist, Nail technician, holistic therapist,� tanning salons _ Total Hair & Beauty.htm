@@ -2089,7 +2089,7 @@ var navToggle = function(){
       var scroll = $(window).scrollTop();
     if (scroll >= leftNavTop) {
     $(container).addClass('fix-leftNav');
-    } else if( leftNavTop < scroll && !$('body').hasClass('stopScroll')){
+    } else if( scroll < leftNavTop && !$('body').hasClass('stopScroll')){
     $(container).removeClass('fix-leftNav');
     }
    });
