@@ -2068,22 +2068,14 @@ var navToggle = function(){
 
       $('body').toggleClass('stopScroll');
       if($('body').hasClass('stopScroll')){
-      /*$('body,html').on('touchmove', function(e){e.preventDefault()});
-      $('#shopNav').on('touchmove',function(e){e.stopPropagation()});*/
         $('#leftNav').on('touchmove',function(e){
           if(!$('#shopNav').has($(e.target)).length){
             e.preventDefault();
+          }
+        });
       }
-          $(window).scrollTop() = windowTop;
-      });
-      
-      
-      
-      }/*else{$('body,html').off('touchmove');}*/
       
     });
-
-    
     
     $('#shopNav li.Header').click(function(){
       $('#shopNav ul ul a').removeClass('active');
@@ -2097,7 +2089,7 @@ var navToggle = function(){
       var scroll = $(window).scrollTop();
     if (scroll >= leftNavTop) {
     $(container).addClass('fix-leftNav');
-    } else {
+    } else if( leftNavTop < scroll && !$('body').hasClass('stopScroll'){
     $(container).removeClass('fix-leftNav');
     }
    });
