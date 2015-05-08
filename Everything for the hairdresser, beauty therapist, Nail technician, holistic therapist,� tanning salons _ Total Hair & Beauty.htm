@@ -2072,6 +2072,7 @@ var navToggle = function(){
           if(!$('#shopNav').has($(e.target)).length){
             e.preventDefault();
           }
+          $('body').scrolltop()=scrollTop(windowTop);
         });
       }
       
