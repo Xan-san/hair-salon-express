@@ -2068,6 +2068,13 @@ var navToggle = function(){
 
       $('body').toggleClass('stopScroll');
       if($('body').hasClass('stopScroll')){
+        $('#leftNav').on('touchstart', function(e) {
+          if (e.currentTarget.scrollTop === 0) {
+            e.currentTarget.scrollTop = 1;
+          } else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
+            e.currentTarget.scrollTop -= 1;
+          }
+        });
         $('#leftNav').on('touchmove',function(e){
           if(!$('#shopNav').has($(e.target)).length){
             e.preventDefault();
