@@ -123,9 +123,8 @@ body.stopScroll #leftNav{
 	overflow:hidden;
 }	
 #shopNav {
-	margin: 0px 0px 8px 0px;
+	margin: 0 0 8px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
 	background-color: #000;
 	color: #FFF;
 	position:absolute; 
@@ -140,6 +139,7 @@ body.stopScroll #leftNav{
 	max-width:525px;
 	text-align:center;
 	overflow:auto;
+	-webkit-overflow-scrolling: touch;
 	}	
 #shopNav ul {
 	list-style-type: none;
