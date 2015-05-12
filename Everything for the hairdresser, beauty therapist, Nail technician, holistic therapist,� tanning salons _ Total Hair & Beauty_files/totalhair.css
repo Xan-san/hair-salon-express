@@ -230,8 +230,8 @@ body.stopScroll #leftNav{
 #mainText {
 	margin: 0 23px;
 	}
-#mainText h1{
-	text-align: center;
+#advertScroller{
+	display:none;
 }	
 #mainText form{
 	display:inline-block;
@@ -458,6 +458,30 @@ body.stopScroll #leftNav{
 }
 }
 @media (min-width: 679px){
+#advertScroller{
+	display:block;
+	height: 350px;
+	width: 650px;
+	overflow: hidden;
+	border: 1px solid hsl(0, 0%, 81%);
+	position: relative;
+}
+#nav {
+    bottom: 10px;
+    left: 10px;
+    /* z-index: 300; */
+    position: absolute;
+}
+#nav li {
+    list-style: outside none none;
+    background: url("../images/button-plain.png") no-repeat scroll 0% 0% transparent;
+    float: left;
+    height:16px;
+    width:16px;
+}
+#nav li.activeLI {
+    background: url("../images/button-sel.png") no-repeat scroll 0% 0% transparent;
+}
 #mainText form{
 	width:49%;
 }
@@ -481,7 +505,7 @@ body.stopScroll #leftNav{
 	width:66%;
 	left:100%;
 	top:0;
-}
+}	
 }
 @media (min-width: 1044px){
 #mainText form{

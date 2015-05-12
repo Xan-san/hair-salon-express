@@ -91,7 +91,7 @@ $('#slideshow').cycle({
 	fx:  'scrollLeft',
     pager:  '#nav',  
     pagerAnchorBuilder: function(idx, slide) { 
-        return '<li><a href="#"><img src="images/common/trans-spacer.gif" width="16" height="16" border="0" /></a></li>'; 
+        return '<li><a href="#"><img src="../images/trans-spacer.gif" width="16" height="16" border="0" /></a></li>'; 
 		//return '<li><a href="#"><img src="' + slide.src + '"  height="50"  border="0" /></a></li>'; 
 
     } 
@@ -836,7 +836,12 @@ $(document).ready(function() {$('#shopNav ul ul').initMenu();});
   <div id="mainArea"><!-- InstanceBeginEditable name="mainText" -->
   <div id="mainText">
       <h1>The widest range of quality professional hair and beauty products</h1>
-<h2 style="text-align: center; "><em><strong>Free Uk mainland Delivery on all orders of £60 or more</strong></em></h2>      
+<h2 style="text-align: center; "><em><strong>Free Uk mainland Delivery on all orders of £60 or more</strong></em></h2> 
+<div id="advertScroller">
+        <div id="nav"><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class="activeLI"><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li></div>
+        <div style="position: relative; width: 650px; height: 350px; overflow: hidden;" id="slideshow" class="pics">
+      <img style="position: absolute; top: 0px; left: -650px; display: none; z-index: 10; opacity: 1; width: 650px; height: 350px;" src="images/slide1.jpg" alt="" title="" border="0" height="350" width="650"><img style="position: absolute; top: 0px; left: -650px; display: none; z-index: 10; opacity: 1; width: 650px; height: 350px;" src="images/slide2.jpg" alt="" title="" border="0" height="350" width="650"><a style="position: absolute; top: 0px; left: 0px; display: block; z-index: 11; opacity: 1; width: 650px; height: 350px;" href="http://www.hairsalonexpress.co.uk/newsite2011/store/retail/fudge" title="Glamtech Scissors great prices big selection all with free Delivery "><img src="images/slide3.jpg" alt="Glamtech Scissors great prices big selection all with free Delivery " title="Glamtech Scissors great prices big selection all with free Delivery " border="0" height="350" width="650"></a><a style="position: absolute; top: 0px; left: -650px; display: none; z-index: 10; opacity: 1; width: 650px; height: 350px;" href="http://www.hairsalonexpress.co.uk/newsite2011/store/hairdressing/acid-perms/indola-perms" title="Freedom travel straghtener "><img src="images/slide4.jpg" alt="Freedom travel straghtener " title="Freedom travel straghtener " border="0" height="350" width="650"></a><a style="position: absolute; top: 0px; left: -650px; display: none; z-index: 10; opacity: 1; width: 650px; height: 350px;" href="http://www.hairsalonexpress.co.uk/newsite2011/store/beauty/beauty-essentials" title="Advert 3"><img src="images/slide5.jpg" alt="Advert 3" title="Advert 3" border="0" height="350" width="650"></a><img style="position: absolute; top: 0px; left: -650px; display: none; z-index: 10; opacity: 1; width: 650px; height: 350px;" src="images/slide6.jpg" alt="" title="" border="0" height="350" width="650"><img style="position: absolute; top: 0px; left: -650px; display: none; z-index: 10; opacity: 1; width: 650px; height: 350px;" src="images/slide7.jpg" alt="" title="" border="0" height="350" width="650"></div>
+      </div>     
 <div id="topSellersHeader">TOP SELLERS…</div>
                   <form method="get" action="store/add-to-cart.php">
           <div id="productListing" style="clear:both">
