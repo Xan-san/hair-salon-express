@@ -225,6 +225,7 @@ body.stopScroll #leftNav{
 	width: 100%;
 	padding: 0;
 	margin-bottom:28px;
+	text-align:center;
 }
 #mainText {
 	margin: 0 23px;
@@ -352,7 +353,7 @@ body.stopScroll #leftNav{
  img, div, input { behavior: url("js/iepngfix.htc") }
 
 #topSellersHeader {
-	max-width:956px;
+	max-width:679px;
 	height: 30px;
 	background: hsl(0,0%,0%);
 	padding: 10px 0px 0px 15px;
