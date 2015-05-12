@@ -224,10 +224,10 @@ body.stopScroll #leftNav{
 #mainArea {
 	width: 100%;
 	padding: 0;
-	display:inline-block;
+	margin-bottom:28px;
 }
 #mainText {
-	margin: 0px 23px 0px 23px;
+	margin: 0 23px;
 	}
 #mainText h1{
 	text-align: center;
@@ -242,8 +242,8 @@ body.stopScroll #leftNav{
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	overflow: hidden;
-	margin: 0px 0px 5px 0px;
-	padding: 5px 0px 0px 0px;
+	margin: 0 0 5px;
+	padding: 5px 0 0;
 	border-top-width: 1px;
 	border-top-style: solid;
 	border-top-color: #CDCDCD;
@@ -303,6 +303,10 @@ body.stopScroll #leftNav{
 	}
 #productlistingText p {
 	margin: 0px 0px 10px 0px;
+	display:none;
+	}
+#productlistingText div{
+	display:none;
 	}
 #socialMedia{
 	display:inline-block;
