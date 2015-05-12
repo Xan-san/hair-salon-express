@@ -463,6 +463,9 @@ body.stopScroll #leftNav{
 }
 }
 @media (min-width: 900px) and (min-height: 650px){
+#leftNavWrapper{
+	position:relative;
+}
 #shopNav{
 	text-align:left;
 	left:0;
@@ -471,6 +474,7 @@ body.stopScroll #leftNav{
 	width:initial;
 	max-width:none;
 	transform:none;
+	height:initial;
 }
 #shopNav ul ul{
 	position:absolute;
