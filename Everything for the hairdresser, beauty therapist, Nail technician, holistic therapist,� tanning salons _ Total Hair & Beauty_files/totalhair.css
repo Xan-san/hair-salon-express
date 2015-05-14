@@ -288,8 +288,6 @@ body.stopScroll #leftNav{
 #productlistingImage h3 a {
 	color: #666;
 	}
-#productlistingText {
-	}
 #productlistingText h1 {
 	color: #C5185E;
 	font-size: 21px;
@@ -309,6 +307,12 @@ body.stopScroll #leftNav{
 #productlistingText div{
 	display:none;
 	}
+#productlistingText br{
+	display:none;
+	}
+#productListing div:nth-child(3){
+	display:none;
+}
 #socialMedia{
 	display:inline-block;
 	text-align:center;
