@@ -176,6 +176,7 @@ body.stopScroll #leftNav{
 #shopNav li.Header:hover{
 	color:hsl(0,0%,100%);
 	border-bottom-color: hsl(0,0%,100%);
+	font-weight:bold;
 }
 #shopNav li.currentHeader{
 	color:hsl(0,0%,100%);
@@ -211,6 +212,7 @@ body.stopScroll #leftNav{
 #shopNav a:hover, #shopNav ul ul .active  {
 	color: hsl(336, 78%, 43%);
 	text-decoration: underline;
+	font-weight:bold;
 }
 #paypalLogo {
 	width: 138px;
