@@ -481,6 +481,7 @@ body.stopScroll #leftNav{
 	max-height:none;
 	width:initial;
 	max-width:none;
+	-webkit-transform:none;
 	transform:none;
 	height:initial;
 }
