@@ -469,7 +469,7 @@ body.stopScroll #leftNav{
 	width:49%;
 }
 }
-@media (min-width: 1540px) and (min-height: 670px){
+@media (min-width: 1300px) and (min-height: 670px){
 #leftNavWrapper{
 	position:relative;
 }
@@ -492,7 +492,7 @@ body.stopScroll #leftNav{
 }
 #shopNav ul ul{
 	position:absolute;
-	width:75%;
+	width:66%;
 	left:100%;
 	top:-2px;
 	border:2px solid hsl(336, 78%, 43%);
