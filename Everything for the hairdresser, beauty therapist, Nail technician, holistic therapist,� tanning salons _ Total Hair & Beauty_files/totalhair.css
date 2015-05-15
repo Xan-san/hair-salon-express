@@ -149,7 +149,7 @@ body.stopScroll #leftNav{
 #shopNav ul {
 	list-style-type: none;
 	margin: 0px;
-	padding: 10px 15px 20px 15px;
+	padding: 10px 15px;
 	line-height: 130%;
 	}	
 #shopNav li {
@@ -160,8 +160,6 @@ body.stopScroll #leftNav{
 	}
 #shopNav ul ul{
 	display:none;
-	left:100%;
-	top:0;
 	background:hsl(336, 78%, 100%);
 	border-radius: 5px;
 	border:2px solid hsl(336, 78%, 43%);
@@ -169,7 +167,7 @@ body.stopScroll #leftNav{
 }
 #shopNav li.Header {
 	font-size: 18px;
-	padding: 7px 0;
+	padding: 7px;
 	color: hsl(336, 78%, 0%);
 	cursor:pointer;
 	border-bottom: 1px solid hsl(336, 78%, 0%);
@@ -471,7 +469,7 @@ body.stopScroll #leftNav{
 	width:49%;
 }
 }
-@media (min-width: 900px) and (min-height: 650px){
+@media (min-width: 1540px) and (min-height: 670px){
 #leftNavWrapper{
 	position:relative;
 }
@@ -486,12 +484,15 @@ body.stopScroll #leftNav{
 	transform:none;
 	height:initial;
 }
+#shopNav li.Header:hover{
+	border-style:none none solid;
+}
 #shopNav li.currentHeader{
 	border-style:none none solid;
 }
 #shopNav ul ul{
 	position:absolute;
-	width:66%;
+	width:75%;
 	left:100%;
 	top:-2px;
 	border:2px solid hsl(336, 78%, 43%);
