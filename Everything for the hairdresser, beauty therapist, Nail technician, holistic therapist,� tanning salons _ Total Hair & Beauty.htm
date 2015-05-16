@@ -838,7 +838,7 @@ $(document).ready(function() {$('#shopNav ul ul').initMenu();});
 <h2 style="text-align: center; "><em><strong>Free Uk mainland Delivery on all orders of £60 or more</strong></em></h2> 
 <div id="advertScroller">
   <div id="nav">
-    <li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class="activeLI"><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li>
+    <li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li><li class=""><a href="#"></a></li>
   </div>
   <div id="slideshow" class="pics">
       <img src="images/slide1.jpg" alt="" title="" border="0" height="350" width="650" />
@@ -2121,8 +2121,10 @@ var navToggle = function(){
    });
 
     $(function() {
-    var $slideshow = $('#slideshow'),
-    $slides = [],
+    var $slideshow = $('#slideshow');
+    var $nav = $('#nav');
+    $slides = [];
+    $navLIs = [];
     active = null;
     
     // build the slides array from the children of the slideshow.  this will pull in any children, so adjust the scope if needed
@@ -2134,6 +2136,12 @@ var navToggle = function(){
         
         $slides.push( $thisSlide );
     });
+
+    $nav.children().each(function(i){
+      var $thisNav = $(this);
+
+      $navLIs.push($thisNav);
+    });
     
     // if no active slide, take the last one
     if ( active === null ) active = $slides.length - 1;
@@ -2141,7 +2149,9 @@ var navToggle = function(){
     function slideSwitch() {
         // add the last-active class to the previously active slide
         var $lastActive = $slides[active];
+        var $lastNav = $navLIs[active];
         $lastActive.addClass('last-active');
+
         
         // find the next slide
         active++;
@@ -2150,12 +2160,15 @@ var navToggle = function(){
         if ( active >= $slides.length ) active = 0;
         
         var $nextActive = $slides[active];
+        var $nextNav = $navLIs[active];
     
         $nextActive.css({opacity: 0.0})
             .addClass('active')
             .animate({opacity: 1.0}, 1000, function() {
                 $lastActive.removeClass('active last-active');
             });
+        $nextNav.addClass('activeLI');
+        $lastNav.removeClass('activeLI');
     }
 
     // start the interval

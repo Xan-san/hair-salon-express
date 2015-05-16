@@ -491,6 +491,7 @@ body.stopScroll #leftNav{
 }
 #nav li.activeLI {
     background: hsl(336,78%,43%);
+    transition: all 1.0s linear 0s;
 }
 #slideshow{
 	position: relative;
