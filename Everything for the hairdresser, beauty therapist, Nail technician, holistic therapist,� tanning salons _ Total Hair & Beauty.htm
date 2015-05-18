@@ -2120,9 +2120,10 @@ var navToggle = function(){
     }
    });
 
-    $(function() {
+    /*$(function() {*/
     var $slideshow = $('#slideshow');
     var $nav = $('#nav');
+    var $navLI = $('#nav li');
     $slides = [];
     $navLIs = [];
     active = null;
@@ -2142,10 +2143,8 @@ var navToggle = function(){
 
       $navLIs.push($thisNav);
     });
-    
     // if no active slide, take the last one
     if ( active === null ) active = $slides.length - 1;
-    
     function slideSwitch() {
         // add the last-active class to the previously active slide
         var $lastActive = $slides[active];
@@ -2172,8 +2171,19 @@ var navToggle = function(){
     }
 
     // start the interval
-    setInterval( slideSwitch, 5000 );
-});
+    var slideStopID = setInterval( slideSwitch, 5000 );
+
+    $navLI.click(function(e){
+      var $thisNavLi = $(this);
+      $slideshow.children().removeClass('active');
+      $navLI.removeClass('activeLI');
+      active = $navLI.index($thisNavLi);
+      $thisNavLi.addClass('activeLI');
+      $slides[active].addClass('active');
+      clearInterval(slideStopID);
+     slideStopID = setInterval( slideSwitch, 5000 );
+    });
+/*});*/
 };
 $(document).ready(navToggle);
 </script>
