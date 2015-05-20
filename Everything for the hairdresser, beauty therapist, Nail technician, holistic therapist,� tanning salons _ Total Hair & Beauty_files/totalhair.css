@@ -126,6 +126,7 @@ body.stopScroll #leftNav{
 }	
 #leftNav form .SearchWrapper{
 	overflow:hidden;
+	height:40px;
 }	
 #shopNav {
 	margin: 0 0 8px;
@@ -408,31 +409,23 @@ body.stopScroll #leftNav{
 	text-align:center;
 }
 
-#SearchForm
-{
-	height: 32px;
-	background-color: #C5185E;
+#SearchForm{
+	border: 2px solid hsl(336,78%,43%);
 	margin: 7px 10px;
-	padding: 10px 10px 0px 10px;
 	border-radius:5px;
 }	
-#SearchForm input[type="text"]
-{	
-	border-width:1px;
-	border-style:solid;
-	border-color:#CCCCCC;
+#SearchForm input[type="text"]{	
+	border:0 none;
 	width:100%;
 	color:#999;
-	margin-right:5px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:13px;
-	height:17px;
-	padding:2px 0px 1px 7px;
+	font-size:15px;
+	height:40px;
+	text-indent:6px;
 }
-#SearchForm input[type="image"]
-{	
+#SearchForm input[type="image"]{	
 	float:right;
-	margin-left:10px;
+	height:40px;
 }
 
 /*Break point*/
