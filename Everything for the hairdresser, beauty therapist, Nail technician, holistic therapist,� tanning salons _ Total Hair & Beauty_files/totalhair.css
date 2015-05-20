@@ -277,11 +277,11 @@ body.stopScroll #leftNav{
 	border-top-style: solid;
 	border-top-color: #CDCDCD;
 	}	
-#productlistingImage {
+/* #productlistingImage {
 	width: 125px;
 	float: left;
 	margin: 5px 0px 0px 0px;
-	}
+	} */
 #productlistingImage h3 {
 	color: #666;
 	font-size: 12px;
@@ -293,13 +293,13 @@ body.stopScroll #leftNav{
 	}
 #productlistingText h1 {
 	color: #C5185E;
-	font-size: 21px;
+	font-size: 16px;
 	font-weight: bold;
 	margin: 5px 0px 0px 0px;
 	}
 #productlistingText h2 {
 	color: #000;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: bold;
 	margin: 0px 0px 0px 0px;
 	}
@@ -431,6 +431,11 @@ body.stopScroll #leftNav{
 }
 
 /*Break point*/
+@media (min-width: 390px){
+#mainText form{
+	width:49%;
+}
+}
 @media (min-width: 525px){
 #shopHeader{
 	float:left;
@@ -517,8 +522,10 @@ body.stopScroll #leftNav{
 #slideshow img.last-active{
 
 }
+}
+@media (min-width: 740px){
 #mainText form{
-	width:49%;
+	width:32%;
 }
 }
 @media (min-width: 1300px) and (min-height: 670px){
@@ -552,7 +559,7 @@ body.stopScroll #leftNav{
 }
 @media (min-width: 1044px){
 #mainText form{
-	width:33%;
+	width:24%;
 }
 #leftNav {
 
