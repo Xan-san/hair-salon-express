@@ -140,8 +140,8 @@ body.stopScroll #leftNav{
             transform: translate(-50%, 0px);
 	border-radius: 5px;
 	display:none;
-	height:73%;
-	max-height:459px;
+	height:100%;
+	max-height:484px;
 	width:100%;
 	max-width:525px;
 	text-align:center;
