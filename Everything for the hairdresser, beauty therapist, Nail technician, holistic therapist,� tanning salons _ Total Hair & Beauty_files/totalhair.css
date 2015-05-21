@@ -102,11 +102,10 @@ body.stopScroll #leftNav{
 }
 #shopHeader {
 	vertical-align:top;
-	width: 201px;
-	height: 30px;
+	width: 200px;
 	margin: 7px auto 0;
 	text-align: center;
-	padding: 10px 0px 0px;
+	padding: 10px 0px 10px;
 	background-color: hsl(336, 78%, 100%);
 	border: 2px solid hsl(336, 78%, 43%);
 	border-radius: 5px;
@@ -127,7 +126,7 @@ body.stopScroll #leftNav{
 }	
 #leftNav form .SearchWrapper{
 	overflow:hidden;
-	height:40px;
+	height:30px;
 }	
 #shopNav {
 	margin: 0 0 8px;
@@ -412,7 +411,7 @@ body.stopScroll #leftNav{
 
 #SearchForm{
 	border: 2px solid hsl(336,78%,43%);
-	margin: 7px 10px;
+	margin: 10px;
 	border-radius:5px;
 }	
 #SearchForm input[type="text"]{	
@@ -421,12 +420,12 @@ body.stopScroll #leftNav{
 	color:#999;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size:15px;
-	height:40px;
+	height:28px;
 	text-indent:6px;
 }
 #SearchForm input[type="image"]{	
 	float:right;
-	padding:9px;
+	padding:4px;
 	background-color:hsl(336,78%,43%);
 }
 
@@ -440,8 +439,17 @@ body.stopScroll #leftNav{
 #shopHeader{
 	float:left;
 	margin: 7px 0px;
-	padding: 10px 0px 0px 10px;
+	padding: 10px 0px 10px 7px;
 	text-align:left;
+}
+#leftNav form .SearchWrapper {
+	height:40px;
+}
+#SearchForm input[type="text"]{	
+	height:38px;
+}
+#SearchForm input[type="image"]{
+	padding:9px;
 }
 /* #shopNav{
 	width:initial;
