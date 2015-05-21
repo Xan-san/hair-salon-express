@@ -103,7 +103,7 @@ body.stopScroll #leftNav{
 #shopHeader {
 	vertical-align:top;
 	width: 200px;
-	margin: 7px auto 0;
+	margin: 7px auto 7px;
 	text-align: center;
 	padding: 10px 0px 10px;
 	background-color: hsl(336, 78%, 100%);
@@ -411,7 +411,7 @@ body.stopScroll #leftNav{
 
 #SearchForm{
 	border: 2px solid hsl(336,78%,43%);
-	margin: 10px;
+	margin: 7px;
 	border-radius:5px;
 }	
 #SearchForm input[type="text"]{	
