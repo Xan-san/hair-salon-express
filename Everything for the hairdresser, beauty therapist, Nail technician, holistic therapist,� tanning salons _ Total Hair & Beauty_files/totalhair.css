@@ -220,7 +220,21 @@ body.stopScroll #leftNav{
 #container.fix-leftNav #leftNavOffset{
 	position:relative;
 	top:104px;
-}		
+}	
+#fancyNavMenu{
+	margin:0;
+	padding:0;
+}
+#fancyNavMenu li{
+	display:inline-block;
+	border: 2px solid hsl(336,78%,43%);
+    border-radius: 5px;
+}
+#fancyNavMenu div{
+    height: 360px;
+    border: 2px solid hsl(336,78%,43%);
+    border-radius: 5px;
+}	
 #mainArea {
 	width: 100%;
 	padding: 0;
