@@ -224,16 +224,31 @@ body.stopScroll #leftNav{
 #fancyNavMenu{
 	margin:0;
 	padding:0;
+	position:relative;
 }
 #fancyNavMenu li{
 	display:inline-block;
 	border: 2px solid hsl(336,78%,43%);
     border-radius: 5px;
 }
+#fancyNavMenu li h2{
+	position:relative;
+	font-size:16px;
+	padding:0;
+	margin:0;
+}
+#fancyNavMenu li div{
+	position:absolute;
+	top:26px;
+	left:0;
+	width:100%;
+	border: 2px solid hsl(336,78%,43%);
+    border-radius: 5px;
+	box-sizing:border-box;
+}	
 #fancyNavMenu div{
     height: 360px;
-    border: 2px solid hsl(336,78%,43%);
-    border-radius: 5px;
+    margin: 0 0 -4px;
 }	
 #mainArea {
 	width: 100%;
@@ -502,6 +517,10 @@ body.stopScroll #leftNav{
 }		
 }
 @media (min-width: 620px){
+#socialBannerWrapper{
+	margin: 0px auto;
+    max-width: 956px;
+}
 #socialMedia{
 	width:initial;
 }
