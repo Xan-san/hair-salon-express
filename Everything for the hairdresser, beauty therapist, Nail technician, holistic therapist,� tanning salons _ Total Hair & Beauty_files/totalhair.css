@@ -255,7 +255,12 @@ body.stopScroll #leftNav{
 	top:26px;
 	left:0;
 	width:100%;
+	opacity:0;
 }	
+#fancyNavMenu .currentArea{
+    opacity:1;
+    z-index:1;
+}
 #fancyNavMenu .menuArea .column1, #fancyNavMenu .menuArea .column2{
 	display:inline-block;
 	height:360px;
@@ -280,9 +285,28 @@ body.stopScroll #leftNav{
 	padding: 2px 0;
 	cursor:pointer;
 }
+#fancyNavMenu .column1 li:hover{
+	color: hsl(336, 78%, 43%);
+    text-decoration: underline;
+}
 #fancyNavMenu .menuArea .column2{
 	width:79%;
+	position:relative;
 }
+#fancyNavMenu .column2 div{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#fancyNavMenu .column2 ul{
+	max-width:160px;
+	background-color:hsl(0,0%,100%);
+	padding: 16px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 #fancyNavMenu .frame{
     height: 360px;
     margin: 0 0 -4px;
