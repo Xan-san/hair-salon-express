@@ -256,6 +256,8 @@ body.stopScroll #leftNav{
 	left:0;
 	width:100%;
 	opacity:0;
+	border: 2px solid hsl(336,78%,43%);
+    border-radius: 5px;
 }	
 #fancyNavMenu .currentArea{
     opacity:1;
@@ -265,14 +267,13 @@ body.stopScroll #leftNav{
 	display:inline-block;
 	height:360px;
 	vertical-align:top;
-	border: 2px solid hsl(336,78%,43%);
-    border-radius: 5px;
 	box-sizing:border-box;
+	border-radius:5px;
 }
 #fancyNavMenu .menuArea .column1{
 	width:20%;
 	padding:16px;
-	/* text-align:left; */
+	border-right: 2px solid hsl(336,73%,43%);
 }
 #fancyNavMenu .column1 h3{
 	margin:0;
@@ -283,14 +284,17 @@ body.stopScroll #leftNav{
 }
 #fancyNavMenu .column1 li{
 	padding: 2px 0;
-	cursor:pointer;
 }
-#fancyNavMenu .column1 li:hover{
+#fancyNavMenu .column1 a{
+    color:hsl(0,0%,0%);
+	text-decoration:none;
+}
+#fancyNavMenu .column1 a:hover{
 	color: hsl(336, 78%, 43%);
     text-decoration: underline;
 }
 #fancyNavMenu .menuArea .column2{
-	width:79%;
+	width:80%;
 	position:relative;
 }
 #fancyNavMenu .column2 div{
@@ -305,11 +309,19 @@ body.stopScroll #leftNav{
 	padding: 16px;
     box-sizing: border-box;
     border-radius: 5px;
+    border-right: 2px solid hsl(336, 78%, 43%);
+    border-bottom: 2px solid hsl(336, 78%, 43%);
 }
-
+#fancyNavMenu .column2 a{
+	color:hsl(0,0%,0%);
+	text-decoration:none;
+}
+#fancyNavMenu .column2 a:hover{
+	color: hsl(336, 78%, 43%);
+    text-decoration: underline;
+}
 #fancyNavMenu .frame{
     height: 360px;
-    margin: 0 0 -4px;
 }	
 #mainArea {
 	width: 100%;
