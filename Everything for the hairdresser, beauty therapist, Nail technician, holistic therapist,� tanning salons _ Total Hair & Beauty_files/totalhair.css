@@ -1,15 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 h1 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 34px;
 	font-weight: bold;
 	line-height: 100%;
 	color: #C5185E;
 	margin: 15px 0px 10px 0px;
 	}	
 h2 {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	}
 ul, li {
@@ -235,15 +232,22 @@ body.stopScroll #leftNav{
 }
 #fancyNavMenu .tab{
 	display:inline-block;
-	border: 2px solid hsl(336,78%,43%);
-    border-radius: 5px;
-    width:13.5%;
+	width:13.5%;	
 }
 #fancyNavMenu .tab h2{
 	position:relative;
 	font-size:16px;
 	padding:0;
 	margin:0;
+	border: 2px solid hsl(336,78%,43%);
+    border-radius: 5px;
+    cursor:pointer;
+    transition: all 0.2s linear 0s;
+}
+#fancyNavMenu .tab h2:hover{
+	background-color: hsl(336, 78%, 43%);
+    color: hsl(0, 0%, 100%);
+    border-color: hsl(336, 78%, 29%);
 }
 #fancyNavMenu .menuArea{
 	position:absolute;
@@ -262,7 +266,19 @@ body.stopScroll #leftNav{
 }
 #fancyNavMenu .menuArea .column1{
 	width:20%;
-	text-align:left;
+	padding:16px;
+	/* text-align:left; */
+}
+#fancyNavMenu .column1 h3{
+	margin:0;
+	font-size:20px;
+}
+#fancyNavMenu .column1 ul{
+	padding: 16px 0;
+}
+#fancyNavMenu .column1 li{
+	padding: 2px 0;
+	cursor:pointer;
 }
 #fancyNavMenu .menuArea .column2{
 	width:79%;
