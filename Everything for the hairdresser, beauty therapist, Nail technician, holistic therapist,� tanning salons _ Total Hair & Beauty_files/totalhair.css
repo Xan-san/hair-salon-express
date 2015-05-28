@@ -255,7 +255,7 @@ body.stopScroll #leftNav{
     border-color: hsl(336, 78%, 29%);
 
 }
-#fancyNavMenu .current .bottopTab{
+#fancyNavMenu .current .bottomTab{
 	background-color: hsl(336, 78%, 43%);
     color: hsl(0, 0%, 100%);
     border-color: hsl(336, 78%, 29%);
