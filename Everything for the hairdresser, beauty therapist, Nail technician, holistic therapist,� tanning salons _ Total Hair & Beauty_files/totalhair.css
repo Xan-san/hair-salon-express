@@ -249,6 +249,18 @@ body.stopScroll #leftNav{
     color: hsl(0, 0%, 100%);
     border-color: hsl(336, 78%, 29%);
 }
+#fancyNavMenu .current .topTab{
+	background-color: hsl(336, 78%, 43%);
+    color: hsl(0, 0%, 100%);
+    border-color: hsl(336, 78%, 29%);
+
+}
+#fancyNavMenu .current .bottopTab{
+	background-color: hsl(336, 78%, 43%);
+    color: hsl(0, 0%, 100%);
+    border-color: hsl(336, 78%, 29%);
+
+}
 #fancyNavMenu .menuArea{
 	position:absolute;
 	height:360px;
