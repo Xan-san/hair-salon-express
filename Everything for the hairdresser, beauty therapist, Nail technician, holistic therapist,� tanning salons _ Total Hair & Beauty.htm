@@ -840,7 +840,7 @@ $(document).ready(function() {$('#shopNav ul ul').initMenu();});
   <h3>Bibbidi</h3>
     <div>
     <ul>
-      <li><a href="">Bobbidi</a>
+      <li class='menuAreaMenu'><a href="">Bobbidi</a>
           <div>
           <ul>
           <li><a href="">Boo</a></li>
@@ -856,7 +856,34 @@ $(document).ready(function() {$('#shopNav ul ul').initMenu();});
           </ul>
           </div>
       </li>
-      <li><a href="">Bobbidi</a></li>
+      <li class='menuAreaMenu'><a href="">Bobbidi</a>
+          <div>
+          <ul>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <!-- </ul>
+          <ul> -->
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          <li><a href="">Boo</a></li>
+          </ul>
+          </div>
+      </li>
       <li><a href="">Bobbidi</a></li>
       <li><a href="">Bobbidi</a></li>
       <li><a href="">Bobbidi</a></li>
@@ -2685,15 +2712,22 @@ var navToggle = function(){
 
     //fancyNavMenu navigation menu builder
     //setting selector variables
-    var $fancyNavTab = $('#fancyNavMenu').find('.tab');
-   var $menuArea = $('#fancyNavMenu').find('menuArea');
+    var $fancyNavMenu = $('#fancyNavMenu');
+    var $fancyNavTab = $fancyNavMenu.find('.tab');
+    var $menuArea = $fancyNavMenu.find('menuArea');
+    var $currentArea = $fancyNavMenu.find('.currentArea');
+    var $menuAreaMenu = $fancyNavMenu.find('.menuAreaMenu > a');
+    var $menuAreaMenuMenu = $fancyNavMenu.find('.menuAreaMenu > div');
+    var $currentAreaTint = $currentArea.find('.column2 div');
 
-    
     //fancyNavMenu navigation click event
     $fancyNavTab.click(function(){
       var $this = $(this);
       var $thisMenuArea = $this.find('.menuArea');
-      var $currentArea = $('#fancyNavMenu').find('.currentArea');
+      $currentArea = $('#fancyNavMenu').find('.currentArea');
+      
+      $currentAreaTint.removeClass('tint');
+      $currentAreaTint = $currentArea.find('.column2 div');
 
       $fancyNavTab.removeClass('current');
       $this.addClass('current');
@@ -2705,6 +2739,31 @@ var navToggle = function(){
             $thisMenuArea.addClass('currentArea');
           });
         });
+      }
+    });
+
+    //fancyNavMenu column1 menu click event
+    $menuAreaMenu.click(function(e){
+      var $this = $(this);
+      var $thisMenu = $this.next();
+      var $currentMenuMenu = $currentArea.find('.currentMenuMenu');
+      
+      e.preventDefault()
+      e.stopPropagation();
+      
+      $currentAreaTint.addClass('tint');
+
+      $menuAreaMenu.removeClass('currentMenu')
+      $this.addClass('currentMenu');
+
+      if(!$thisMenu.hasClass('currentMenuMenu')){
+        $currentMenuMenu.hide(400,'linear',function(){
+          $currentMenuMenu.removeClass('currentMenuMenu');
+          
+        });
+        $thisMenu.show(400,'linear',function(){
+            $thisMenu.addClass('currentMenuMenu');
+          });
       }
     });
 

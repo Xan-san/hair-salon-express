@@ -317,16 +317,25 @@ body.stopScroll #leftNav{
     background:hsl(0,0%,100%);
     border-radius: 5px;
     box-sizing: border-box;
-    border: 2px solid hsl(336, 78%, 43%);
+    border-bottom: 2px solid hsl(336, 78%, 43%);
     border-top: none;
-    width: 160px;
+    width: 405%;
     z-index: 1;
+    display:none;
+    max-height:100%;
+    overflow:auto;
 }
-#fancyNavMenu .column2 .backgroundTint{
+#fancyNavMenu .column1 ul li div li{
+    display:inline-block;
+    min-width:10%;
+}
+#fancyNavMenu .column2 div{
     position:absolute;
     width:100%;
     height:100%;
-    background-color: rgba(0, 0, 0, 0.5);
+}
+#fancyNavMenu .column2 .tint{
+    background-color: hsla(0, 0%, 0%, 0.5);
 }
 #fancyNavMenu .column2 ul{
 	max-width:160px;
