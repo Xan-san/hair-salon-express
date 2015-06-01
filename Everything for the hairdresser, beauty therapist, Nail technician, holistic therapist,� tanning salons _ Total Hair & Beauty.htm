@@ -2714,39 +2714,47 @@ var navToggle = function(){
     //setting selector variables
     var $fancyNavMenu = $('#fancyNavMenu');
     var $fancyNavTab = $fancyNavMenu.find('.tab');
-    var $menuArea = $fancyNavMenu.find('menuArea');
+    var $menuArea = $fancyNavMenu.find('.menuArea');
     var $currentArea = $fancyNavMenu.find('.currentArea');
     var $menuAreaMenu = $fancyNavMenu.find('.menuAreaMenu > a');
     var $menuAreaMenuMenu = $fancyNavMenu.find('.menuAreaMenu > div');
-    var $currentAreaTint = $currentArea.find('.column2 div');
+    var $currentAreaTint = $currentArea.find('.column2');
+    var $currentMenuMenu = $currentArea.find('.currentMenuMenu');
 
     //fancyNavMenu navigation click event
     $fancyNavTab.click(function(){
       var $this = $(this);
       var $thisMenuArea = $this.find('.menuArea');
-      $currentArea = $('#fancyNavMenu').find('.currentArea');
+      $currentArea = $fancyNavMenu.find('.currentArea');
       
       $currentAreaTint.removeClass('tint');
-      $currentAreaTint = $currentArea.find('.column2 div');
+      $currentMenuMenu.hide(400,'linear');
+      $currentMenuMenu.removeClass('currentMenuMenu');
 
       $fancyNavTab.removeClass('current');
       $this.addClass('current');
       
       if(!$thisMenuArea.hasClass('currentArea')){
+        $currentMenuMenu.hide(400,'linear',function(){
         $currentArea.animate({opacity:0},400,'linear',function(){
           $currentArea.removeClass('currentArea');
           $thisMenuArea.animate({opacity:1},400,'linear',function(){
             $thisMenuArea.addClass('currentArea');
+            $currentArea = $thisMenuArea;
+            $currentAreaTint = $currentArea.find('.column2');
           });
         });
+      });
       }
+
+      
     });
 
     //fancyNavMenu column1 menu click event
     $menuAreaMenu.click(function(e){
       var $this = $(this);
       var $thisMenu = $this.next();
-      var $currentMenuMenu = $currentArea.find('.currentMenuMenu');
+      
       
       e.preventDefault()
       e.stopPropagation();
@@ -2763,6 +2771,7 @@ var navToggle = function(){
         });
         $thisMenu.show(400,'linear',function(){
             $thisMenu.addClass('currentMenuMenu');
+            $currentMenuMenu = $currentArea.find('.currentMenuMenu');
           });
       }
     });
