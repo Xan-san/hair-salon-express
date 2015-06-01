@@ -306,6 +306,10 @@ body.stopScroll #leftNav{
 	color: hsl(336, 78%, 43%);
     text-decoration: underline;
 }
+#fancyNavMenu .column1 .currentMenu{
+	color: hsl(336, 78%, 43%);
+    text-decoration: underline;
+}
 #fancyNavMenu .menuArea .column2{
 	width:80%;
 	position:relative;
