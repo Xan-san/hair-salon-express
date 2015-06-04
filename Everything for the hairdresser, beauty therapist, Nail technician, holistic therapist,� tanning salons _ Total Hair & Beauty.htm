@@ -832,6 +832,7 @@ $(document).ready(function() {$('#shopNav ul ul').initMenu();});
   </div>
   </div>
 <div id='leftNavOffset'>
+<nav>
 <ul id='fancyNavMenu'>
   <li class='tab current'>
   <h2 class='topTab'>Bibbidi</h2>
@@ -2399,6 +2400,7 @@ $(document).ready(function() {$('#shopNav ul ul').initMenu();});
   </div>
   </li>
 </ul>
+</nav>
   <div id="mainArea"><!-- InstanceBeginEditable name="mainText" -->
   <div id="mainText">
       <!-- <h1>The widest range of quality professional hair and beauty products</h1> -->
@@ -3716,28 +3718,34 @@ var navToggle = function(){
       var $this = $(this);
       var $thisMenuArea = $this.find('.menuArea');
       $currentArea = $fancyNavMenu.find('.currentArea');
-      
-      $currentAreaTint.removeClass('tint');
-      $currentMenuMenu.hide(400,'linear');
-      $currentMenuMenu.removeClass('currentMenuMenu');
 
       $fancyNavTab.removeClass('current');
       $this.addClass('current');
       
       if(!$thisMenuArea.hasClass('currentArea')){
-        $currentMenuMenu.hide(400,'linear',function(){
-        $currentArea.animate({opacity:0},400,'linear',function(){
+        $currentArea.removeClass('currentArea');
+        $currentAreaTint.removeClass('tint');
+      $menuAreaMenu.removeClass('currentMenu');
+     $currentMenuMenu.removeClass('currentMenuMenu');
+        setTimeout(function(){
+        $thisMenuArea.addClass('currentArea')
+        },400);
+        /*$currentArea.animate({opacity:0},400,'linear',function(){
           $currentArea.removeClass('currentArea');
-          $thisMenuArea.animate({opacity:1},400,'linear',function(){
-            $thisMenuArea.addClass('currentArea');
+          $thisMenuArea.animate({opacity:1},400,'linear',function(){*/
+          setTimeout(function(){  
             $currentArea = $thisMenuArea;
             $currentAreaTint = $currentArea.find('.column2');
-          });
-        });
-      });
-      }
+          },400);
+        }
+      
 
       
+    });
+
+    //Prevent bubbling
+    $menuArea.click(function(e){
+      e.stopPropagation();
     });
 
     //fancyNavMenu column1 menu click event
@@ -3745,22 +3753,20 @@ var navToggle = function(){
       var $this = $(this);
       var $thisMenu = $this.next();
       
-      
       e.preventDefault()
       e.stopPropagation();
       
       $currentAreaTint.addClass('tint');
 
-      $menuAreaMenu.removeClass('currentMenu')
+      $menuAreaMenu.removeClass('currentMenu');
       $this.addClass('currentMenu');
 
       if(!$thisMenu.hasClass('currentMenuMenu')){
-        $currentMenuMenu.hide(400,'linear',function(){
+        $thisMenu.addClass('currentMenuMenu');
+        $currentMenuMenu.animate({opacity:0},400,'linear',function(){
           $currentMenuMenu.removeClass('currentMenuMenu');
-          
         });
-        $thisMenu.show(400,'linear',function(){
-            $thisMenu.addClass('currentMenuMenu');
+        $thisMenu.animate({opacity:1},400,'linear',function(){
             $currentMenuMenu = $currentArea.find('.currentMenuMenu');
           });
       }
