@@ -833,10 +833,10 @@ $(document).ready(function() {$('#shopNav ul ul').initMenu();});
   </div>
 <div id='leftNavOffset'>
 <nav>
-<ul id='fancyNavMenu'>
+<ul id='fancyNav'>
   <li class='tab current'>
   <h2 class='topTab'>Bibbidi</h2>
-  <div class='menuArea currentArea'>
+  <div class='menuArea show currentArea'>
   <div class='column1'>
   <h3>Bibbidi</h3>
     <div>
@@ -3702,45 +3702,48 @@ var navToggle = function(){
     }
    });
 
-    //fancyNavMenu navigation menu builder
-    //setting selector variables
-    var $fancyNavMenu = $('#fancyNavMenu');
-    var $fancyNavTab = $fancyNavMenu.find('.tab');
-    var $menuArea = $fancyNavMenu.find('.menuArea');
-    var $currentArea = $fancyNavMenu.find('.currentArea');
-    var $menuAreaMenu = $fancyNavMenu.find('.menuAreaMenu > a');
-    var $menuAreaMenuMenu = $fancyNavMenu.find('.menuAreaMenu > div');
+    //fancyNav navigation menu builder
+    //cache selectors
+    var $fancyNav = $('#fancyNav');
+    var $fancyNavTab = $fancyNav.find('.tab');
+    var $menuArea = $fancyNav.find('.menuArea');
+    var $currentArea = $fancyNav.find('.currentArea');
+    var $menuAreaMenu = $fancyNav.find('.menuAreaMenu > a');
+    var $menuAreaMenuMenu = $fancyNav.find('.menuAreaMenu > div');
     var $currentAreaTint = $currentArea.find('.column2');
     var $currentMenuMenu = $currentArea.find('.currentMenuMenu');
 
-    //fancyNavMenu navigation click event
+    //fancyNav navigation click event
     $fancyNavTab.click(function(){
+      //cache selectors
       var $this = $(this);
       var $thisMenuArea = $this.find('.menuArea');
-      $currentArea = $fancyNavMenu.find('.currentArea');
-
+      $currentArea = $fancyNav.find('.currentArea');
+      
+      //make clicked tab the current selector
       $fancyNavTab.removeClass('current');
       $this.addClass('current');
       
+      //conditional to check for current viewable menu area then fade in new area while fading out old
       if(!$thisMenuArea.hasClass('currentArea')){
+      //make area associated with current tab the current area
         $currentArea.removeClass('currentArea');
+        $thisMenuArea.addClass('show');
+      //reset old area
         $currentAreaTint.removeClass('tint');
-      $menuAreaMenu.removeClass('currentMenu');
-     $currentMenuMenu.removeClass('currentMenuMenu');
+        $menuAreaMenu.removeClass('currentMenu');
+        $currentMenuMenu.removeClass('currentMenuMenu show');
+
         setTimeout(function(){
-        $thisMenuArea.addClass('currentArea')
+        $currentArea.removeClass('show');
+        $thisMenuArea.addClass('currentArea');
         },400);
-        /*$currentArea.animate({opacity:0},400,'linear',function(){
-          $currentArea.removeClass('currentArea');
-          $thisMenuArea.animate({opacity:1},400,'linear',function(){*/
-          setTimeout(function(){  
+
+        setTimeout(function(){  
             $currentArea = $thisMenuArea;
             $currentAreaTint = $currentArea.find('.column2');
           },400);
-        }
-      
-
-      
+        }  
     });
 
     //Prevent bubbling
@@ -3748,7 +3751,7 @@ var navToggle = function(){
       e.stopPropagation();
     });
 
-    //fancyNavMenu column1 menu click event
+    //fancyNav column1 menu click event
     $menuAreaMenu.click(function(e){
       var $this = $(this);
       var $thisMenu = $this.next();
@@ -3762,13 +3765,17 @@ var navToggle = function(){
       $this.addClass('currentMenu');
 
       if(!$thisMenu.hasClass('currentMenuMenu')){
-        $thisMenu.addClass('currentMenuMenu');
-        $currentMenuMenu.animate({opacity:0},400,'linear',function(){
-          $currentMenuMenu.removeClass('currentMenuMenu');
-        });
-        $thisMenu.animate({opacity:1},400,'linear',function(){
+        $currentMenuMenu.removeClass('currentMenuMenu');
+        $thisMenu.addClass('show');
+
+        setTimeout(function(){
+           $thisMenu.addClass('currentMenuMenu');
+           $currentMenuMenu.removeClass('show');
+        },400);
+
+        setTimeout(function(){
             $currentMenuMenu = $currentArea.find('.currentMenuMenu');
-          });
+          },400);
       }
     });
 
