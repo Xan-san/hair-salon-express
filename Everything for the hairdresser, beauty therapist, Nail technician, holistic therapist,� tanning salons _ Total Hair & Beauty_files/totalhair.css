@@ -124,6 +124,19 @@ body {
 	overflow:hidden;
 	height:36px;
 }	
+@-webkit-keyframes fadeIn {
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeIn {
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+#leftNav .show{
+	display:block;
+	-webkit-animation: fadeIn 0.4s linear;
+    animation: fadeIn 0.4s linear;
+}
 #shopNav {
 	margin: 0 0 8px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -142,10 +155,22 @@ body {
 	text-align:center;
 	overflow:auto;
 	-webkit-overflow-scrolling: touch;
+}
+#shopNav .Header {
+	font-size: 16px;
+	padding: 8px;
+	color: hsl(336, 78%, 0%);
+	cursor:pointer;
+	border-bottom: 1px solid hsl(336, 78%, 0%);
+	border-radius:5px;
+	transition: color 0.2s linear, border 0.2s linear;
+}
+#shopNav .Header:hover, #shopNav .currentHeader{
+	color:hsl(336, 78%, 43%);
+	border: 2px solid hsl(336, 78%, 43%);
+	border-top:none;
 }	
 #shopNav ul {
-	list-style-type: none;
-	margin: 0px;
 	padding: 10px 15px;
 	line-height: 125%;
 }	
@@ -162,43 +187,23 @@ body {
 	border:2px solid hsl(336, 78%, 43%);
 	border-top:none;
 }
-#shopNav .Header {
-	font-size: 16px;
-	padding: 8px;
-	color: hsl(336, 78%, 0%);
-	cursor:pointer;
-	border-bottom: 1px solid hsl(336, 78%, 0%);
-	border-radius:5px;
-	transition: color 0.2s linear, border 0.2s linear;
-	}
-#shopNav .Header:hover{
-	color:hsl(336, 78%, 43%);
-	border: 2px solid hsl(336, 78%, 43%);
-	border-top:none;
-}
-#shopNav .currentHeader{
-	color:hsl(336, 78%, 43%);
-	border: 2px solid hsl(336, 78%, 43%);
-	border-top:none;
-}	
-#shopNav ul.catsNav {
+/* #shopNav ul.catsNav {
 	list-style-type: none;
 	margin: 0px;
 	padding: 1px 0px 1px 0px;
 	line-height: 150%;
-	}
-#shopNav ul.innerNav {
-	list-style-type: none;
+} */
+#shopNav .innerNav {
 	padding: 2px 15px 1px 10px;
 	background-color: hsl(336, 78%, 100%);
-	}
-#shopNav ul.innerNav a{
+}
+#shopNav .innerNav a{
 	color:hsl(336, 78%, 0%);
 }
-#shopNav ul.innerNav a:hover{
+#shopNav .innerNav a:hover{
 	color:hsl(336, 78%, 43%);
 }
-#shopNav ul.innerNav li {
+#shopNav .innerNav li {
 	border-bottom:none;
 	}
 #shopNav a {
@@ -206,7 +211,7 @@ body {
 	transition: color 0.2s linear, text-decoration 0.2s linear;
 	color:hsl(336, 78%, 0%);
 	}	
-#shopNav a:hover, #shopNav ul ul .active  {
+#shopNav a:hover, #shopNav .active  {
 	color: hsl(336, 78%, 43%);
 	text-decoration: underline;
 }
@@ -215,7 +220,7 @@ body {
 	margin: 0px 0px 10px 33px;
 	border: 1px solid #CCC;
 	}	
-#container.fix-leftNav #leftNavOffset{
+.fixLeftNav #leftNavOffset{
 	position:relative;
 	top:104px;
 }	
@@ -225,14 +230,6 @@ body {
 	position:relative;
 	text-align:center;
 	max-width:956px;
-}
-@-webkit-keyframes fadeIn {
-      0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-@keyframes fadeIn {
-      0% { opacity: 0; }
-    100% { opacity: 1; }
 }
 #fancyNav .tab{
 	display:inline-block;
@@ -260,13 +257,11 @@ body {
 	top:26px;
 	left:0;
 	width:100%;
-	opacity:0;
 	border: 2px solid hsl(336,78%,43%);
     border-radius: 5px;
 }	
 #fancyNav .currentArea{
     display:block;
-    opacity:1;
     z-index:1;
 	-webkit-animation: fadeIn 0.4s linear;
     animation: fadeIn 0.4s linear;
@@ -306,7 +301,6 @@ body {
 #fancyNav .menuMenu{
     display:none;
     z-index:1;
-    opacity:0;
     position: absolute;
     left: 100%;
     top: 0px;
@@ -321,7 +315,6 @@ body {
 }
 #fancyNav .currentMenuMenu{
 	display:block;
-	opacity:1;
 	-webkit-animation: fadeIn 0.4s linear;
     animation: fadeIn 0.4s linear;
 }
