@@ -3693,12 +3693,11 @@ var navToggle = function(){
       }
     });
 
-    $shopHeader.click(function(e){
-      e.stopPropagation();
-    });
-
-    $innerNavHeader.click(function(){
+    $innerNavHeader.click(function(e){
       var $this = $(this);
+
+      e.preventDefault();
+      e.stopPropagation();
 
       if(!$this.hasClass('active')){
         $innerNav.removeClass('show');
@@ -3770,7 +3769,7 @@ var navToggle = function(){
       var $this = $(this);
       var $thisMenu = $this.next();
       
-      e.preventDefault()
+      e.preventDefault();
       e.stopPropagation();
       
       $currentAreaTint.addClass('tint');
