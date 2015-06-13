@@ -58,7 +58,7 @@ eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,lo
 
 
 </script>
-<script type="text/javascript" src="Everything%20for%20the%20hairdresser,%20beauty%20therapist,%20Nail%20technician,%20holistic%20therapist,%EF%BF%BD%20tanning%20salons%20_%20Total%20Hair%20&amp;%20Beauty_files/chili-1.js"></script>
+<!-- <script type="text/javascript" src="Everything%20for%20the%20hairdresser,%20beauty%20therapist,%20Nail%20technician,%20holistic%20therapist,%EF%BF%BD%20tanning%20salons%20_%20Total%20Hair%20&amp;%20Beauty_files/chili-1.js"></script> -->
 <!-- 
 <script type="text/javascript" src="Everything%20for%20the%20hairdresser,%20beauty%20therapist,%20Nail%20technician,%20holistic%20therapist,%EF%BF%BD%20tanning%20salons%20_%20Total%20Hair%20&amp;%20Beauty_files/jquery.cycle.all.2.72.js"></script>
 <script type="text/javascript" language="javascript">
@@ -2386,7 +2386,12 @@ $(document).ready(function() {$('#shopNav ul ul').initMenu();});
   </li>
 </ul>
 </nav>
-  <div id="mainArea"><!-- InstanceBeginEditable name="mainText" -->
+  <div id="mainArea">
+  <div id='customer'>
+  <a href="http://www.hairsalonexpress.co.uk/myaccount/my-account.php">My Account</a>
+  <a href="http://www.hairsalonexpress.co.uk/store/shopping-basket.php">Shopping Basket</a>
+  </div>
+  <!-- InstanceBeginEditable name="mainText" -->
   <div id="mainText">
       <!-- <h1>The widest range of quality professional hair and beauty products</h1> -->
 <h2 style="text-align: center; "><em><strong>Free Uk mainland Delivery on all orders of £60 or more</strong></em></h2> 
@@ -3632,35 +3637,39 @@ Sold in outer display gift box. MRRP £13.99</p><p></p>
 <script>
 var navToggle = function(){
 
-    var $window = $(window);
-    var $body = $('body');
-    var $container = $('#container');
-    var $leftNav = $('#leftNav');
-    var $shopHeader = $('#shopHeader');
-    var $shopNav = $('#shopNav');
-    var $shopNavHeader = $shopNav.find('.Header');
-    var $shopNavMenu = $shopNavHeader.next();
-    var $innerNavHeader = $shopNav.find('a');
-    var $innerNav = $shopNav.find('.innerNav');
-    var leftNavTop = $leftNav.offset().top;
+  //Build shop menu
+  //Cache selectors  
+  var $window = $(window);
+  var $body = $('body'); 
+  var $container = $('#container');
+  var $leftNav = $('#leftNav');
+  var $shopHeader = $('#shopHeader');
+  var $shopNav = $('#shopNav');
+  var $shopNavHeader = $shopNav.find('.Header');
+  var $shopNavMenu = $shopNavHeader.next();
+  var $innerNavHeader = $shopNav.find('a');
+  var $innerNav = $shopNav.find('.innerNav');
+  var leftNavTop = $leftNav.offset().top;
 
-    $shopHeader.click(function(){
-
-      var windowTop = $window.scrollTop();
-      
-      if(leftNavTop > windowTop){
+  //click function for opening menu
+  $shopHeader.click(function(){
+  //cache height from top of screen
+    var windowTop = $window.scrollTop();
+  //conditional for placing menu at top of screen when it's not fixed    
+    if(leftNavTop > windowTop){
       $container.toggleClass('fixLeftNav');
-      }
-
+    }
+  //close all opened menus 
       $innerNavHeader.removeClass('active');
       $shopNavHeader.removeClass('currentHeader');
       $shopNavMenu.removeClass('show');
       $innerNav.removeClass('show');
       $shopNav.toggleClass('show');
-
+  //prevent scrolling outside menu while menu is open
       $body.toggleClass('stopScroll');
       if($body.hasClass('stopScroll')){
         $shopHeader.text('Close Menu');
+  //prevent scrolling outside menu on touch screens
         $leftNav.on('touchstart', function(e) {
           if (e.currentTarget.scrollTop === 0) {
             e.currentTarget.scrollTop = 1;
@@ -3669,7 +3678,7 @@ var navToggle = function(){
           }
         });
         $leftNav.on('touchmove',function(e){
-          if(!$('#shopNav').has($(e.target)).length){
+          if(!$shopNav.has($(e.target)).length){
             e.preventDefault();
           }
           $body.scrollTop(windowTop);
@@ -3679,14 +3688,14 @@ var navToggle = function(){
       }
 
     });
-    
+  //opens next level down of menus
     $shopNavHeader.click(function(){
       var $this = $(this);
-
+  //close all lower opened menus
       $innerNavHeader.removeClass('active');
       $shopNavMenu.removeClass('show');
       $innerNav.removeClass('show');
-
+  //conditional opening lower menu if clicked menu isn't currently open
       if(!$this.hasClass('currentHeader')){
 
       $shopNavHeader.removeClass('currentHeader');
@@ -3694,13 +3703,13 @@ var navToggle = function(){
       $this.next().addClass('show');
       }
     });
-
+  //opens next level again of menus
     $innerNavHeader.click(function(e){
       var $this = $(this);
-
+  //prevents page trying to open
       e.preventDefault();
       e.stopPropagation();
-
+  //conditional opening lower menu if clicked menu isn't currently open
       if(!$this.hasClass('active')){
         $innerNav.removeClass('show');
         $innerNavHeader.removeClass('active');
@@ -3708,9 +3717,9 @@ var navToggle = function(){
         $this.next().addClass('show');
       }
     });
-
-    $window.scroll(function(e) {
-      var scroll = $window.scrollTop();
+  //fixes menu to top of page while scrolling
+  $window.scroll(function(e) {
+    var scroll = $window.scrollTop();
 
     if (scroll >= leftNavTop) {
     $container.addClass('fixLeftNav');

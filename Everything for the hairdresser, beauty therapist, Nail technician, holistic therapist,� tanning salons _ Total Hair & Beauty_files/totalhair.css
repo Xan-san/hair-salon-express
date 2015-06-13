@@ -103,7 +103,6 @@ body {
 	background-color: hsl(336, 78%, 100%);
 	border: 2px solid hsl(336, 78%, 43%);
 	border-radius: 5px;
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	color: hsl(0,0%,0%);
 	cursor:pointer;
@@ -346,12 +345,44 @@ body {
 	margin-bottom:28px;
 	text-align:center;
 }
+#customer > a{
+	display:inline-block;
+	text-decoration:none;
+	margin: 0 auto 8px;
+	text-align: center;
+	padding: 6px 0;
+	background-color: hsl(336, 78%, 100%);
+	border: 2px solid hsl(336, 78%, 43%);
+	border-radius: 5px;
+	font-size: 16px;
+	color: hsl(0,0%,0%);
+	width:45%;
+	transition: background-color 0.2s linear, color 0.2s linear, border-color 0.2s linear;
+}
+#customer > a:hover{
+	background-color: hsla(336, 78%, 43%, 1);
+	color:hsl(0,0%,100%);
+	border-color: hsl(336, 78%, 29%);
+}
 #mainText {
 	margin: 0 23px;
 	}
 #advertScroller{
 	display:none;
 }	
+#topSellersHeader {
+	max-width:679px;
+	height: 30px;
+	background: hsl(0,0%,0%);
+	padding: 10px 0px 0px 15px;
+	margin:0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 100%;
+	font-weight: bold;
+	color: #FFF;
+	border-radius: 5px;
+}
 #mainText form{
 	display:inline-block;
 	vertical-align: top;
@@ -506,21 +537,7 @@ body {
 }
  img, div, input { behavior: url("js/iepngfix.htc") 
 }
-#topSellersHeader {
-	max-width:679px;
-	height: 30px;
-	background: hsl(0,0%,0%);
-	padding: 10px 0px 0px 15px;
-	margin:0 auto;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 21px;
-	line-height: 100%;
-	font-weight: bold;
-	color: #FFF;
-	border-radius: 5px;
-}
-.codeBox
-{
+.codeBox{
 	margin:0px 7px 0px 7px;
 	padding:4px;
 	height:18px;
@@ -571,7 +588,6 @@ body {
 	padding:7px;
 	background-color:hsl(336,78%,43%);
 }
-
 /*Break points*/
 @media (min-width: 390px){
 #mainText form{
@@ -594,16 +610,13 @@ body {
 #SearchForm input[type="image"]{
 	padding:7px;
 }
-/* #shopNav{
-	width:initial;
-} */
-/* #shopNav ul ul{
-	position:absolute;
-} */
 .fixLeftNav #leftNavOffset{
 	position:relative;
 	top:56px;
-}		
+}	
+#customer{
+	display:none;
+}	
 }
 @media (min-width: 620px){
 #socialBannerWrapper{
