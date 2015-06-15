@@ -3705,6 +3705,8 @@ var navToggle = function(){
       $shopNavHeader.removeClass('currentHeader');
       $this.addClass('currentHeader');
       $this.next().addClass('show');
+      }else{
+        $this.removeClass('currentHeader');
       }
     });
   //opens next level again of menus
@@ -3713,12 +3715,15 @@ var navToggle = function(){
   //prevents page trying to open
       e.preventDefault();
       e.stopPropagation();
+  //close all lower opened menus
+      $innerNav.removeClass('show');
   //conditional opening lower menu if clicked menu isn't currently open
       if(!$this.hasClass('active')){
-        $innerNav.removeClass('show');
         $innerNavHeader.removeClass('active');
         $this.addClass('active');
         $this.next().addClass('show');
+      }else{
+        $this.removeClass('active');
       }
     });
   //fixes menu to top of page while scrolling
@@ -3732,8 +3737,8 @@ var navToggle = function(){
     }
    });
 
-    //fancyNav navigation menu builder
-    //cache selectors
+  //fancyNav navigation menu builder
+  //cache selectors
     var $fancyNav = $('#fancyNav');
     var $fancyNavTab = $fancyNav.find('.tab');
     var $menuArea = $fancyNav.find('.menuArea');
@@ -3742,44 +3747,37 @@ var navToggle = function(){
     var $menuAreaMenuMenu = $fancyNav.find('.menuMenu');
     var $currentAreaTint = $currentArea.find('.column2');
     var $currentMenuMenu = $currentArea.find('.currentMenuMenu');
-
-    //fancyNav navigation click event
+  //fancyNav navigation click event
     $fancyNavTab.click(function(){
-      //cache selectors
+  //cache selectors
       var $this = $(this);
       var $thisMenuArea = $this.find('.menuArea');
       $currentArea = $fancyNav.find('.currentArea');
-      
-      //make clicked tab the current selector
+  //make clicked tab the current selector
       $fancyNavTab.removeClass('current');
       $this.addClass('current');
-      
-      //conditional to check for current viewable menu area then fade in new area while fading out old
+  //conditional to check for current viewable menu area then fade in new area while fading out old
       if(!$thisMenuArea.hasClass('currentArea')){
-      //make area associated with current tab the current area
+  //make area associated with current tab the current area
         $currentArea.removeClass('currentArea');
-
-      //reset old area
+  //reset old area
         $currentAreaTint.removeClass('tint');
         $menuAreaMenu.removeClass('currentMenu');
         $currentMenuMenu.removeClass('currentMenuMenu');
 
         $thisMenuArea.addClass('currentArea');
-      
-      //Delay selector change until animation finishes    
+  //Delay selector change until animation finishes    
         setTimeout(function(){  
             $currentArea = $thisMenuArea;
             $currentAreaTint = $currentArea.find('.column2');
           },400);
         }  
     });
-
-    //Prevent bubbling
+  //Prevent bubbling
     $menuArea.click(function(e){
       e.stopPropagation();
     });
-
-    //fancyNav column1 menu click event
+  //fancyNav column1 menu click event
     $menuAreaMenu.click(function(e){
       var $this = $(this);
       var $thisMenu = $this.next();
@@ -3789,17 +3787,19 @@ var navToggle = function(){
       
       $currentAreaTint.addClass('tint');
 
-      $menuAreaMenu.removeClass('currentMenu');
-      $this.addClass('currentMenu');
+      $currentMenuMenu.removeClass('currentMenuMenu');
 
-      if(!$thisMenu.hasClass('currentMenuMenu')){
-        $currentMenuMenu.removeClass('currentMenuMenu');
-        $thisMenu.addClass('currentMenuMenu');
-           
-      //Delay selector change until animation finishes     
+      if(!$this.hasClass('currentMenu')){
+        $menuAreaMenu.removeClass('currentMenu');
+        $this.addClass('currentMenu');
+        $thisMenu.addClass('currentMenuMenu');   
+  //Delay selector change until animation finishes     
         setTimeout(function(){
             $currentMenuMenu = $currentArea.find('.currentMenuMenu');
           },400);
+      }else{
+        $currentAreaTint.removeClass('tint');
+        $this.removeClass('currentMenu');
       }
     });
 
